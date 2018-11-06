@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Group>
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = "Groups";
+    ViewBag.Icon = "group";
+   
+}
+
+@section Menu{
+    <div class="collection">
+        <a asp-action="Add" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="collection-item blue white-text">Add group</a>
+
+
+    </div>
+    }
+
+    <div class="row">
+
+        @if (Model.Count() == 0)
+        {
+            <h1> The group list is empty!</h1>
+        }
+        else
+        {
+            foreach (var Group in Model)
+            {
+
+            <div class="col m6 s12">
+
+                <div class="card  blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">@Group.GroupName   </span>
+                        <blockquote>
+                            <p>Group id: @Group.GroupID</p>
+                            <p>Group year: @Group.YearOfStudy</p>
+                        </blockquote>
+                        
+                    </div>
+                    <div class="card-action">
+                        <a asp-action="ShowGroup" class="waves-effect red waves-light btn blue" asp-route-GroupID=@Group.GroupID asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Select</a>
+
+                        <a class="waves-effect red waves-light btn modal-trigger" href="#modal@(Group.GroupID)">Remove</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal@(Group.GroupID)" class="modal">
+                            <div class="modal-content">
+                                <h4>Remove @Group.GroupName?</h4>
+                                <p>All data will be lost, student accounts will be deleted.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green white-text btn-flat green">Cancel</a>
+                                <a asp-action="RemoveGroup" asp-route-GroupId="@Group.GroupID" class="modal-close waves-effect waves-green btn-flat red">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+
+        }
+     </div>
+        <script>
+            $(document).ready(function () {
+                $('.modal').modal();
+            });
+        </script>

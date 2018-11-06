@@ -1,0 +1,62 @@
+﻿@model RegistrationViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Student registration";
+}
+<div class="valign-wrapper row" >
+    <div class="col card hoverable s12 ">
+        <div class="card-content">
+            <h4>@Model.FirstName @Model.LastName</h4>
+
+            <span class="badge blue white-text">#@Model.NumberOfStudentBook</span>
+            <span class="badge orange white-text">@Model.Email</span>
+            <span class="card-title">@ViewBag.Title</span>
+            <form asp-action="Registration" asp-controller="Account" asp-area="Student" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div class="row">
+
+                    <input type="hidden" asp-for="ConfirmEmailHash" value="@Model.ConfirmEmailHash" />
+                    <input type="hidden" asp-for="ID" value="@Model.ID" />
+                    <input type="hidden" asp-for="Email" value="@Model.Email" />
+                    <input type="hidden" asp-for="NumberOfStudentBook" value="@Model.NumberOfStudentBook" />
+                    <input type="hidden" asp-for="FirstName" value="@Model.FirstName" />
+                    <input type="hidden" asp-for="LastName" value="@Model.LastName" />
+
+                    <div class=" input-field col l6 s12">
+                        <label asp-for="UserName">Username:</label>
+                        <input asp-for="UserName" />
+                        <span asp-validation-for="UserName" class="red-text"></span>
+                    </div>
+                    <div class="input-field col l6 s12">
+                        <i class="material-icons prefix">phone</i>
+                        <label asp-for="PhoneNumber">Phone number:</label>
+                        <input asp-for="PhoneNumber" />
+                        <span asp-validation-for="PhoneNumber" class="red-text"></span>
+                    </div>
+                    <div class=" input-field col l6 s12">
+                        <label asp-for="Password">Password:</label>
+                        <input asp-for="Password" type="password" />
+                        <span asp-validation-for="Password" class="red-text"></span>
+                    </div>
+                    <div class=" input-field col l6 s12">
+                        <label asp-for="PasswordConfirm">Confirm password:</label>
+                        <input asp-for="PasswordConfirm" type="password" />
+                        <span asp-validation-for="PasswordConfirm" class="red-text"></span>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <input type="submit" name="name" value="Create account" class="btn" />
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

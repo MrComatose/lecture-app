@@ -1,0 +1,11 @@
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Release\netcoreapp2.0\TeacherCite.deps.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Release\netcoreapp2.0\TeacherCite.runtimeconfig.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Release\netcoreapp2.0\TeacherCite.runtimeconfig.dev.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Release\netcoreapp2.0\TeacherCite.dll
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Release\netcoreapp2.0\TeacherCite.pdb
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.AssemblyInfo.cs
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.dll
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Release\netcoreapp2.0\TeacherCite.pdb

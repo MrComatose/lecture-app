@@ -1,0 +1,23 @@
+﻿{
+
+  "Data": {
+    "EmailSettings": {
+      "SmtpServer": "smtp.gmail.com",
+      "Login": "kovalukapp@gmail.com",
+        "Password": "Alizar1n"
+    },
+    "Admin": {
+      "FirstName": "FirstName",
+      "LastName": "LastName",
+      "Email": "kovalukapp@gmail.com",
+      "Password": "secret123",
+      "Username": "Teacher",
+      "PhoneNumber": "0672222713",
+      "Roles": "Teacher"
+    }
+  },
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=KovalukAppDataBase;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

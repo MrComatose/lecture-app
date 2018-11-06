@@ -1,0 +1,49 @@
+﻿@model CreateStudentAccountViewModel
+@{ 
+    Layout = "_FormLayout";
+    ViewBag.Title = "Create new student account";
+}
+
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l6 pull-l3">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="CreateStudentAccount" asp-controller="Account">
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div>
+                    <label asp-for="Email"></label><br />
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email" class="red-text"></span>
+                </div>
+
+                <div>
+                    <label asp-for="NumberOfStudentBook">Number of student book:</label><br />
+                    <input asp-for="NumberOfStudentBook" />
+                    <span asp-validation-for="NumberOfStudentBook" class="red-text"></span>
+                </div>
+
+                <div>
+                    <label asp-for="FirstName">First name:</label><br />
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName" class="red-text"></span>
+                </div>
+                <div>
+                    <label asp-for="SecondName">Second Name:</label><br />
+                    <input asp-for="SecondName" />
+                    <span asp-validation-for="SecondName" class="red-text"></span>
+                </div>
+
+                <input type="hidden" asp-for="GroupID"  value=@Model.GroupID />
+                <input type="hidden" asp-for="returnUrl" value=@Model.returnUrl/>
+                <div>
+                    <input type="submit" class="btn " value="Create" />
+                    <a href="@Model.returnUrl" class="btn red">Cancel</a>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>

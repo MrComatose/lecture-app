@@ -1,0 +1,29 @@
+﻿@model KovalukApp.Models.StRgsMailModel
+
+<div>
+    <div style="
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color:#d32f2f ;
+text-align:center;
+margin: auto;
+    width: 80%;
+    padding: 10px;
+
+
+">
+        <br />
+        <h1 style="color:#90caf9 ;">Student registration</h1>
+        <br />
+        <p style="color:#90caf9 ;">Hello <span style="color:gold">@Model.user.FirstName  @Model.user.LastName</span> you has been invited to Kovaluk application. This is your registration link:</p>
+        <span>
+            <a style="  background-color: #009688; /* Green */
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;" href="@Model.link">Registration link</a>
+        </span>
+        <br /><br />
+    </div>
+</div>

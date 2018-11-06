@@ -1,0 +1,58 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+}
+.sidenav {
+    overflow-y: hidden;
+}
+    .sidenav:hover {
+        overflow-y: auto;
+    }
+.form-body {
+    background-image: url("../../img/fon.jpg");
+    background-size: auto, 100%;
+    overflow:hidden;
+}
+.Logotype {
+    height: 50px;
+   margin-top:7px;
+}
+.nav-wrapper{
+    height:64px;
+}
+.brand-logo{
+    height:64px;
+}
+nav {
+    background-color: #ba68c8;
+ 
+}
+
+.markdown td{
+    text-align:center !important;
+    
+}
+
+    .markdown img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.fon {
+    background-color: #ba68c8;
+    opacity: 0.5;
+    position: fixed ;
+    height:100vh;
+    width: 100vw;
+}
+
+@media only screen and (min-width : 0px) and (max-width : 600px) {
+    .Logotype {
+        height: 56px;
+    }
+ img{
+     max-height:800px;
+ }
+   .form-body{
+       overflow:auto;
+   }
+}

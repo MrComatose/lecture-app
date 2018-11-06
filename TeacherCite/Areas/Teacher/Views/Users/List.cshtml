@@ -1,0 +1,112 @@
+﻿@model UserListViewModel
+@{
+    ViewBag.Title = "User list";
+    Layout = "ManagerLayout";
+    ViewBag.Icon = "assignment";
+   
+}
+
+
+@section Menu{
+<div class="collection">
+    <a href="#!" class="collection-item">All Users<span class="badge">@Model.Count</span></a>
+
+
+</div>
+
+}
+
+
+
+    <ul class="collection">
+
+        @foreach (var user in Model.Users)
+        {
+            <li class="collection-item avatar z-depth-2">
+                <a asp-area="" asp-action="Profile" asp-controller="Account" asp-route-username="@(user.UserName)" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+                    @if (user.Avatar == null)
+                    {
+                        <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                    }
+                    else
+                    {
+                        <img class="circle" style="object-fit: cover;" src="/File/Photo/@user.UserName">
+                    }
+
+                    <span class="title">@user.FirstName @user.LastName</span>
+                    <p>
+                        @user.Email <br>
+                        @user.UserName
+                    </p>
+                </a>
+                <div class="secondary-content">
+                    <a class="btn-floating btn-large waves-effect waves-light red" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@user.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">edit</i></a>
+                 
+
+                </div>
+
+
+            </li>
+        }
+    </ul>
+
+
+
+    @*Pagination*@
+    <div class="center">
+
+        <ul class="pagination">
+            @if (Model.Count > 5)
+            {
+                if (Model.PageNumber == 0)
+                {
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                }
+                else
+                {
+                    <li class="waves-effect"><a asp-action="List" asp-route-page=@(Model.PageNumber-1)><i class="material-icons">chevron_left</i></a></li>
+                }
+                if (Model.PageNumber >= 2)
+                {
+                    for (int i = Model.PageNumber - 2; i <= ((Model.Count / 5) - Model.PageNumber >= 2 ? Model.PageNumber + 2 : (Model.Count / 5)); i++)
+                    {
+                        if (i == Model.PageNumber)
+                        {
+                            <li class="active"><a asp-action="List" asp-route-page="@i">@i</a></li>
+                        }
+                        else
+                        {
+                            <li class="waves-effect"><a asp-action="List" asp-route-page="@i">@i</a></li>
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i <= ((Model.Count / 5) - Model.PageNumber > 4 ? Model.PageNumber + 4 : (Model.Count / 5)); i++)
+                    {
+                        if (i == Model.PageNumber)
+                        {
+                            <li class="active"><a asp-action="List" asp-route-page="@i">@i</a></li>
+                        }
+                        else
+                        {
+                            <li class="waves-effect"><a asp-action="List" asp-route-page="@i">@i</a></li>
+                        }
+                    }
+                }
+
+
+                if (Model.PageNumber == Model.Count / 5)
+                {
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                }
+                else
+                {
+                    <li class="waves-effect"><a asp-action="List" asp-route-page=@(Model.PageNumber+1)><i class="material-icons">chevron_right</i></a></li>
+                }
+
+            }
+
+        </ul>
+    </div>
+

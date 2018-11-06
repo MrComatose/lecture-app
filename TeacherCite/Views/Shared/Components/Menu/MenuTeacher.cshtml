@@ -1,0 +1,62 @@
+﻿@model KovalukApp.Models.User
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view ">
+            <div class="background">
+                <img  width="300" src="~/img/first.jpg">
+            </div>
+            <a href="#user">
+                @if (Model.Avatar == null)
+                {
+                    <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png"/>
+                }
+                else
+                {
+                    <img class="circle" style="object-fit: cover;" src="/File/Photo/@Model.UserName"/>
+                }
+                   
+                        <span class="badge white-text chip teal">@Model.FirstName @Model.LastName</span>
+                        <span class="badge white-text chip teal">@Model.Email</span>
+                     
+                  
+                
+            </a>
+            <br /><br />
+        </div>
+    </li>
+    <li><a class="subheader">Teacher Options</a></li>
+    <li><a href="/"><i class="material-icons">home</i>Home</a> </li>
+    <li><a asp-area="Teacher" asp-controller="Users" asp-action="List"><i class="material-icons">list</i>User accounts </a></li>
+    <li><a asp-area="Teacher" asp-controller="Group" asp-action="List"><i class="material-icons">group</i>Student Manager</a></li>
+    <li><a asp-area="Teacher" asp-controller="File" asp-action="List"><i class="material-icons">folder</i>File Manager</a></li>
+    <li><a asp-area="Teacher" asp-controller="Documentation" asp-action="List"><i class="material-icons">event</i>Documentation </a></li>
+    <li><a asp-area="Teacher" asp-controller="News" asp-action="List"><i class="material-icons">settings</i>News Manager</a></li>
+    <li><a asp-area="Teacher" asp-controller="Task" asp-action="List"><i class="material-icons">code</i>Tasks<span id="unchecked" class="badge chip red white-text"></span></a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Settings</a></li>
+
+
+    <li><a class="waves-effect" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@User.Identity.Name" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>Edit my account</a></li>
+    <li><a class="waves-effect" href="/Account/Logout"><i class="material-icons">exit_to_app</i>log out</a></li>
+
+    <li><br/><br /></li>
+</ul>
+<script>
+    $.ajax('/Teacher/Task/UnChecked', {
+        method: "get",
+        processData: false,
+        contentType: false,
+        success(count) {
+            if (count !== 0) {
+                $("#unchecked").text(count);
+            } else {
+                $("#unchecked").remove();
+            }
+              
+        },
+        error() {
+
+            alert('Upload error');
+        },
+    });
+</script>

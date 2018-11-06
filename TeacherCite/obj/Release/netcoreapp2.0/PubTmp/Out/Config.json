@@ -1,0 +1,17 @@
+﻿{
+  "Data": {
+    "Admin": {
+      "FirstName": "Alexander",
+      "LastName": "Parovenko",
+      "Email": "a.parovenko@gmail.com",
+      "Password": "Alizar1n",
+      "Username": "MrComatose",
+      "PhoneNumber": "0672696713",
+      "Roles": "Teacher" 
+    }
+  },
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=TeacherCiteDataBase;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

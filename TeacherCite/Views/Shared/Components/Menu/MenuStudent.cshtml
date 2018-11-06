@@ -1,0 +1,39 @@
+﻿@model KovalukApp.Models.User
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img width="300" src="~/img/first.jpg">
+            </div>
+            <a href="#user">
+                @if (Model.Avatar == null)
+                {
+                    <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png" />
+                }
+                else
+                {
+                    <img class="circle" style="object-fit: cover;" src="/File/Photo/@Model.UserName" />
+                }
+
+                <span class="badge white-text chip teal">@Model.FirstName @Model.LastName</span>
+                <span class="badge white-text chip teal">@Model.Email</span>
+
+
+
+            </a>
+            <br /><br />
+        </div>
+    </li>
+    <li><a class="subheader">Student Options</a></li>
+    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+
+
+    <li><a class="waves-effect" asp-area="Student" asp-action="List" asp-controller="Task" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">code</i>My tasks</a></li>
+    <li><a class="waves-effect" asp-area="Student" asp-action="List" asp-controller="Documentation" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">assignment</i>Documentation</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Settings</a></li>
+    <li><a class="waves-effect" asp-area="Student" asp-action="StudentProfile" asp-controller="Account"  asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>Profile/Progress</a></li>
+    <li><a class="waves-effect" asp-area="Student" asp-action="Edit" asp-controller="Account" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">edit</i>Edit account</a></li>
+    <li><a class="waves-effect" href="/Account/Logout"><i class="material-icons">exit_to_app</i>log out</a></li>
+
+</ul>

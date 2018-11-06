@@ -1,0 +1,47 @@
+﻿@model AddDocFileViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Add doc file";
+}
+
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="AddDocFile" enctype="multipart/form-data">
+                <input type="hidden" asp-for="ReturnUrl" value="@Model.ReturnUrl" />
+                <input type="hidden" asp-for="PageID" value="@Model.PageID" />
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span><i class="material-icons">get_app</i></span>
+                        <input asp-for="File" type="file" />
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload file:" />
+                    </div>
+                    <span asp-validation-for="File" class="red-text"></span>
+
+                </div>
+                <div>
+                    <label asp-for="Desription"> </label><br />
+                    <input asp-for="Desription" />
+                    <span asp-validation-for="Desription" class="red-text"></span>
+                </div>
+                <div>
+                    <div class="card-action row">
+                        <input type="submit" class="btn col s6" value="Add" />
+                        <a href="@Model.ReturnUrl" class="btn red col s6">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+

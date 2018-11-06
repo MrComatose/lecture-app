@@ -1,0 +1,15 @@
+[
+  {
+    "outputFileName": "wwwroot/materialized/matelialized.min.css",
+    "inputFiles": [
+      "wwwroot/materialized/matelialized.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/materialized/materialized.min.js",
+    "inputFiles": [
+      "wwwroot/materialized/materialized.js"
+    ]
+  }
+ 
+]

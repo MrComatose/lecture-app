@@ -1,0 +1,44 @@
+﻿@model AddGroupViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Add new group";
+
+}
+
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l6 pull-l3">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post"  asp-action="Add"
+                  asp-route-returnUrl="@Model.returnUrl">
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div>
+                    <label asp-for="GroupName"> Group Name</label><br />
+                    <input asp-for="GroupName" />
+                    <span asp-validation-for="GroupName" class="red-text"></span>
+                </div>
+
+                <div>
+                    <label asp-for="YearOfStudy">Year of studying:</label><br />
+                    <input asp-for="YearOfStudy"  />
+                    <span asp-validation-for="YearOfStudy"  class="red-text"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Description"></label><br />
+                    <textarea style="height:200px;" class="materialize-textarea" asp-for="Description" > </textarea>
+                    <span asp-validation-for="Description" class="red-text"></span>
+                </div>
+
+                <div>
+                    <input type="submit" class="btn " value="Add" />
+                    <a href="@Model.returnUrl" class="btn red">Cancel</a>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>

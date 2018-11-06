@@ -1,0 +1,11 @@
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\TeacherCite.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\TeacherCite.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\TeacherCite.AssemblyInfo.cs
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\TeacherCite.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\KovalukApp.deps.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\KovalukApp.runtimeconfig.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\KovalukApp.runtimeconfig.dev.json
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\KovalukApp.dll
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\KovalukApp.pdb
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.dll
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.pdb
