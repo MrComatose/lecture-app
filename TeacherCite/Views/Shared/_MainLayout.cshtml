@@ -26,7 +26,7 @@
     }
 
 
-    <nav id="maintheme" from-color="ba68c8" to-color="4a148c" colorize="backgroundColor">
+    <nav  >
 
         <div class="container">
             <div class="nav-wrapper">
@@ -82,28 +82,20 @@
 
     @RenderBody()
 
-    <footer id="footer" style="background-color:#ba68c8;" from-color="ba68c8" to-color="4a148c" colorize="backgroundColor" class="page-footer">
+    <footer   class="page-footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">StudyLink</h5>
+                    <h5 class="white-text">KovalukApp</h5>
 
                     This is a student project. Any amount would help support and continue development on this project and is greatly appreciated.
                 </div>
-                <div class="col l4 offset-l2 s12">
-
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">News</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Files</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">For student</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Log in</a></li>
-                    </ul>
-                </div>
+               
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2018 Copyright StudyLink
+                © 2018 Copyright KovalukApp
 
                 <a class="grey-text text-lighten-4 right" href="mailto:parovenko.alexander@gmail.com">Created by Alexander Parovenko</a>
             </div>
@@ -111,8 +103,7 @@
     </footer>
 
     <script>
-        startColorize("maintheme");
-        startColorize("footer");
+ 
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems, null);

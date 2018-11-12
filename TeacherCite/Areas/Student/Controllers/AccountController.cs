@@ -143,9 +143,9 @@ namespace KovalukApp.Areas.Student.Controllers
                     }
                     return View(model);
                 }
-
+                return Redirect("/Account/Login");
             }
-            return Redirect("/Account/Login");
+            return View(model);
 
         }
         [HttpGet]

@@ -1,17 +1,24 @@
 ﻿{
+
   "Data": {
+    "EmailSettings": {
+      "SmtpServer": "smtp.gmail.com",
+      "Login": "kovalukapp@gmail.com",
+        "Password": "Alizar1n"
+    },
     "Admin": {
-      "FirstName": "Alexander",
-      "LastName": "Parovenko",
-      "Email": "a.parovenko@gmail.com",
-      "Password": "Alizar1n",
-      "Username": "MrComatose",
-      "PhoneNumber": "0672696713",
-      "Roles": "Teacher" 
+      "FirstName": "FirstName",
+      "LastName": "LastName",
+      "Email": "kovalukapp@gmail.com",
+      "Password": "secret123",
+      "Username": "Teacher",
+      "PhoneNumber": "0672222713",
+      "Roles": "Teacher"
     }
   },
 
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=TeacherCiteDataBase;Trusted_Connection=True;MultipleActiveResultSets=true"
+    //"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=KovalukAppDataBase;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "DefaultConnection": "Data Source=SQL6006.site4now.net;Initial Catalog=DB_A42A23_KovalukApp;User Id=DB_A42A23_KovalukApp_admin;Password=Alizar1n;"
   }
 }

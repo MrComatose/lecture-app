@@ -29,6 +29,7 @@ namespace KovalukApp.Controllers
         }
 
         [HttpGet]
+   
         public IActionResult Login(string returnUrl = "/")
         {
 

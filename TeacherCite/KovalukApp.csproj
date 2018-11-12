@@ -13,10 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="EmailTemplates\EmailRegistration.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\ViewModel\" />
     <Folder Include="Areas\Admin\Views\" />
@@ -24,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="EmailTemplates\EmailRegistration.cshtml" />
+    <None Include="Views\Shared\EmailRegistration.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

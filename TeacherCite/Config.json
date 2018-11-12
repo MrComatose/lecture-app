@@ -18,6 +18,7 @@
   },
 
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=KovalukAppDataBase;Trusted_Connection=True;MultipleActiveResultSets=true"
+    //"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=KovalukAppDataBase;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "DefaultConnection": "Data Source=SQL6006.site4now.net;Initial Catalog=DB_A42A23_KovalukApp;User Id=DB_A42A23_KovalukApp_admin;Password=Alizar1n;"
   }
 }

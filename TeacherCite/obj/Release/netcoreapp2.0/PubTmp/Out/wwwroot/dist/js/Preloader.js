@@ -1,7 +1,7 @@
 ﻿
 function ready() {
 	var preloader = document.getElementById("preloader");
-	preloader.style.visibility = "hidden";
+	preloader.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+window.onload=ready;
