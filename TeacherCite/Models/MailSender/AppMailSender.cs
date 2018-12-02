@@ -82,6 +82,11 @@ namespace KovalukApp.Models
         public string link { get; set; }
 
     }
+    public class PasswordResetMailModel
+    {
+        public User user { get; set; }
+        public string link { get; set; }
+    }
     public class RazorViewToStringRenderer
     {
         private readonly IRazorViewEngine _viewEngine;

@@ -48,6 +48,7 @@ namespace KovalukApp
                 options.ReturnUrlParameter = "returnUrl";
                 options.LogoutPath = "/Account/LogOut";
                 options.AccessDeniedPath = "/";
+              
                
             });
             services.Configure<IdentityOptions>(options =>

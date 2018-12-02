@@ -19,6 +19,7 @@
                     <label asp-for="Password"></label><br />
                     <input asp-for="Password" />
                     <span asp-validation-for="Password" class="red-text"></span>
+
                 </div>
                 <div>
                     <p>
@@ -26,12 +27,14 @@
                             <input type="checkbox" asp-for="RememberMe" class="filled-in" />
                             <span>Remember me</span>
                         </label>
+
                     </p>
+                    <span class="teal-text"> <a class="modal-trigger reset" href="#reset">Forgot password?</a></span>
                 </div>
                 <div>
                     <div class="card-action row">
                         <input type="submit" class="btn col s6" value="Log in" />
-                        <a href="@Model.ReturnUrl" class="btn red col s6">Cancel</a>
+                        <a href="/" class="btn red right col s6">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -43,3 +46,42 @@
     </div>
 </div>
 
+<div id="reset" class="modal">
+    <div class="modal-content">
+     
+            <h4 class="center">Reset password</h4>
+            <div class="col s6 ">
+                <label>Enter your Email.</label><br />
+                <input id="email" type="email" />
+            </div>
+        </div>
+    
+    <div class="modal-footer">
+        <a href="#!" onclick="Reset()" class="modal-close waves-effect waves-green btn-flat">submin</a>
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">cancel</a>
+    </div>
+</div>
+<script>
+      $(document).ready(function(){
+    $('#reset').modal();
+    });
+
+    const Reset = () => {
+        let email = document.getElementById('email').value;
+        var formData = new FormData();
+        formData.set("Email", email);
+        $.ajax('/Account/ResetPassword', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success() {
+                M.toast({ html: '<blockquote class="green-text">Check your Email!</blockquote>', classes: 'rounded' });
+            },
+            error() {
+
+                M.toast({ html: '<blockquote class="red-text">error!!!</blockquote>', classes: 'rounded' });
+            },
+        });
+    };
+</script>

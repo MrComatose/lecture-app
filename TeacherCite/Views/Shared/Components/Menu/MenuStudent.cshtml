@@ -27,12 +27,12 @@
     <li><a class="subheader">Student Options</a></li>
     <li><a href="/"><i class="material-icons">home</i>Home</a></li>
 
-
+    <li><a class="waves-effect" asp-area="Student" asp-action="List" asp-controller="Group"><i class="material-icons">group</i>My group</a></li>
     <li><a class="waves-effect" asp-area="Student" asp-action="List" asp-controller="Task" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">code</i>My tasks</a></li>
     <li><a class="waves-effect" asp-area="Student" asp-action="List" asp-controller="Documentation" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">assignment</i>Documentation</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Settings</a></li>
-    <li><a class="waves-effect" asp-area="Student" asp-action="StudentProfile" asp-controller="Account"  asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>Profile/Progress</a></li>
+    <li><a class="waves-effect" asp-area="Student" asp-action="StudentProfile" asp-controller="Account" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>Profile/Progress</a></li>
     <li><a class="waves-effect" asp-area="Student" asp-action="Edit" asp-controller="Account" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">edit</i>Edit account</a></li>
     <li><a class="waves-effect" href="/Account/Logout"><i class="material-icons">exit_to_app</i>log out</a></li>
 

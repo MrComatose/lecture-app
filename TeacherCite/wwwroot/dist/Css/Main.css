@@ -2,9 +2,7 @@
     font-family: 'Montserrat', sans-serif;
   
 }
-.sidenav {
-    overflow-y: hidden;
-}
+
     .sidenav:hover {
         overflow-y: auto;
     }
@@ -56,6 +54,7 @@ nav {
 
 @media only screen and (min-width : 0px) and (max-width : 600px) {
     .Logotype {
+        margin-top:0;
         height: 56px;
     }
  img{

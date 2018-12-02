@@ -1,0 +1,146 @@
+﻿@model GroupInfoViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.Group.GroupName + " page";
+    ViewBag.Icon = "group";
+}
+
+
+<div class="col s12">
+    <ul class="tabs">
+        <li class="tab col s3"><a href="#lectures"><span class="orange white-text badge">@Model.Lectures.Count </span>Lectures</a></li>
+        <li class="tab col s3"><a class="active" href="#students"><span class="blue white-text badge">@Model.Students.Count </span>Students</a></li>
+
+    </ul>
+</div>
+<div id="lectures">
+    <div class="row">
+        <div class="col s12 m3">
+            <div class="card-panel teal">
+                <span class="white-text">
+                    @Model.Group.GroupName  <span class="chip blue white-text">Year:@Model.Group.YearOfStudy</span>
+                    <br />
+                    @Model.Group.Description<br />
+                    <br />
+                </span>
+            </div>
+        </div>
+        <div class="col s12 m9">
+            @if (Model.Lectures.Count() == 0)
+            {
+                <blockquote>
+                    <h1> The lecture list is empty!</h1>
+
+                </blockquote>
+            }
+            else
+            {
+
+
+
+
+                <ul class="collapsible" data-collapsible="accordion">
+
+                    @foreach (var lecture in Model.Lectures)
+                    {
+
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>@lecture.Date.Day.@lecture.Date.Month.@lecture.Date.Year  at  @lecture.Place <span class="@(lecture.Visits?.Count==Model.Students.Count?"green-text":"orange-text") badge">@(lecture.Visits?.Count ?? 0)/@Model.Students.Count</span></div>
+                            <div class="collapsible-body">
+
+                                <p>@lecture.Description</p>
+
+                                
+                            </div>
+                        </li>
+                    }
+
+
+                </ul>
+
+
+
+
+
+
+            }
+        </div>
+    </div>
+
+
+</div>
+<div id="students">
+
+    <div class="row">
+        <div class="col m3 s12">
+
+
+            <div class="card-panel teal">
+                <span class="white-text">
+                    @Model.Group.GroupName  <span class="chip blue white-text">Year:@Model.Group.YearOfStudy</span>
+                    <br />
+                    @Model.Group.Description<br />
+                    <br />
+                </span>
+            </div>
+
+        </div>
+        <div class="col l9 s12">
+
+
+
+            @if (Model.Students.Count == 0)
+            {
+                <blockquote>
+                    <h1>No students in this group.</h1>
+                </blockquote>
+            }
+            else
+            {
+                <ul class="collection">
+                    @foreach (var user in Model.Students)
+                    {
+                        <li class="collection-item avatar z-depth-2">
+                            <a asp-area="" asp-controller="Account" asp-action="Profile" asp-route-username="@user.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+                                @if (user.Avatar == null)
+                                {
+                                    <img class="circle" style="object-fit: cover; " src="~/img/img_avatar.png">
+                                }
+                                else
+                                {
+                                    <img class="circle" style="object-fit: cover;" src="/File/Photo/@user.UserName">
+                                }
+
+                                <span class="title">@user.FirstName @user.LastName</span>
+                                <p>
+                                    @user.Email <br>
+                                    @user.UserName
+                                </p>
+                            </a>
+                            <div class="secondary-content">
+
+                            </div>
+
+
+                        </li>
+
+                    }
+                </ul>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+            $(document).ready(function () {
+                $('.tabs').tabs();
+            });
+            $(document).ready(function () {
+                $('.collapsible').collapsible();
+            });
+
+
+</script>

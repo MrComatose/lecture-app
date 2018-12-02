@@ -33,7 +33,7 @@ namespace KovalukApp.Areas.Student.Controllers
         {
             var user = await Manager.FindByNameAsync(User.Identity.Name);
 
-            return View();
+            return View(Docs.Tasks.Where(x=>x.UserID==user.Id));
         }
         public async Task<IActionResult> ShowTask(string returnUrl, int StTaskID)
         {

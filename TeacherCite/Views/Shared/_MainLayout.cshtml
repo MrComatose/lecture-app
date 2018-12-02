@@ -20,57 +20,57 @@
 </head>
 <body>
 
-    @if (User.Identity.IsAuthenticated)
-    {
-        @await Component.InvokeAsync("Menu")
-    }
+   
 
+    <header>
+        <nav>
 
-    <nav  >
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a class="brand-logo " href="/"><img class="Logotype circle z-depth-5 centered" src="~/Logotype.png" /></a>
 
-        <div class="container">
-            <div class="nav-wrapper">
-                <a class="brand-logo " href="/"><img class="Logotype circle z-depth-5 centered" src="~/Logotype.png" /></a>
-
-                @if (!User.Identity.IsAuthenticated)
-                {
-                    <a href="/Account/Login" class="sidenav-trigger"><i class="material-icons left ">account_circle</i></a>
-                }
-                else
-                {
-                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                }
-                <ul class="right hide-on-med-and-down">
-
-
-
-
-                    @if (User.Identity.IsAuthenticated)
+                    @if (!User.Identity.IsAuthenticated)
                     {
-
-
-                        <li>
-                            <div data-target="slide-out" class="sidenav-trigger">
-                                <a href="#">@User.Identity.Name  <i class="material-icons  right">more_vert</i></a>
-                            </div>
-                        </li>
+                        <a href="/Account/Login" class="sidenav-trigger"><i class="material-icons left ">account_circle</i></a>
                     }
                     else
                     {
-                        <li>
-
-                            <a href="/Account/Login"><i class="material-icons left">account_circle</i>Log in</a>
-                        </li>
-
+                        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     }
+                    <ul class="right hide-on-med-and-down">
 
-                </ul>
 
+
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+
+
+                            <li>
+                                <div data-target="slide-out" class="sidenav-trigger">
+                                    <a href="#">@User.Identity.Name  <i class="material-icons  right">more_vert</i></a>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+
+                                <a href="/Account/Login"><i class="material-icons left">account_circle</i>Log in</a>
+                            </li>
+
+                        }
+
+                    </ul>
+
+                </div>
             </div>
-        </div>
-    </nav>
-
-    
+        </nav>
+        @if (User.Identity.IsAuthenticated)
+        {
+            @await Component.InvokeAsync("Menu")
+        }
+    </header>
     <div id="preloader">
         <div class="progress">
             <div class="indeterminate"></div>
@@ -78,7 +78,7 @@
     </div>
 
 
-
+    
 
     @RenderBody()
 
@@ -104,11 +104,10 @@
 
     <script>
  
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, null);
-
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
         });
+
     </script>
 </body>
 </html>
