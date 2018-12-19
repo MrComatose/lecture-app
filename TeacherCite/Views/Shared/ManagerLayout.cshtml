@@ -23,16 +23,16 @@
     
         <div class="row " style="background-color:aquamarine;">
             <nav >
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="slide-out" class="left sidenav-trigger "><i class="material-icons">menu</i></a>
                 @if (ViewBag.Return != null)
                 {
 
-                    <a class="sidenav-trigger right" href="@ViewBag.Return"><i class="material-icons  right">arrow_back</i></a>
+                    <a class="sidenav-trigger left" href="@ViewBag.Return"><i class="material-icons  right">arrow_back</i></a>
 
                 }
                 <div class="nav-wrapper container">
-                    <a href="#!" class="brand-logo ">@ViewBag.Title<i class="material-icons">@ViewBag.Icon</i></a>
-                    <ul class="right hide-on-med-and-down">
+                    <a href="#!" class="brand-logo right">@ViewBag.Title<i class="material-icons">@ViewBag.Icon</i></a>
+                    <ul class="left hide-on-med-and-down">
                         @if (ViewBag.Return != null)
                         {
                             <li class=" left-align">

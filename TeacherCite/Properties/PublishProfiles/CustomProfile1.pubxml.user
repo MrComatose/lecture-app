@@ -6,15 +6,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword />
-    <_PublishTargetUrl>ftp://FTP-EU.SITE4NOW.NET/Kovaluk</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAw8F7/SyGfUW2Ozz6G4tSsQAAAAACAAAAAAAQZgAAAAEAACAAAACsXRSF86u9M/1YS3uV9jghmSzoZ/E+ehqabVsrGa4bswAAAAAOgAAAAAIAACAAAAA2BKvm4SuGMacaKJJv7DGtTb4UAUJGFZSW6xnUkjByciAAAABSrT8Y/czXPU/XVPGLkE4A2DN0/JuZOqVVOR7w0jSl5EAAAAC7H8lfksLI9juBp7wNU3uKx/0BoWOyMRut7cxGM5j1n3azVtK0D4PfCEjB+5t+fYOqmwqslEYRQ2XFZnmoGwHn</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp-eu.site4now.net/KovalukApp</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AngleSharp.dll">
       <publishTime>07/15/2018 23:26:24</publishTime>
     </File>
     <File Include="BouncyCastle.Crypto.dll">
-      <publishTime>10/04/2018 13:45:44</publishTime>
+      <publishTime>04/10/2018 13:45:44</publishTime>
     </File>
     <File Include="bundleconfig.json">
       <publishTime>09/10/2018 19:37:37</publishTime>
@@ -86,25 +86,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2018 21:25:41</publishTime>
     </File>
     <File Include="KovalukApp.deps.json">
-      <publishTime>11/12/2018 10:15:15</publishTime>
+      <publishTime>12/02/2018 21:12:08</publishTime>
     </File>
     <File Include="KovalukApp.dll">
-      <publishTime>11/12/2018 10:11:16</publishTime>
+      <publishTime>12/02/2018 21:11:42</publishTime>
     </File>
     <File Include="KovalukApp.pdb">
-      <publishTime>11/12/2018 10:11:16</publishTime>
+      <publishTime>12/02/2018 21:11:42</publishTime>
     </File>
     <File Include="KovalukApp.PrecompiledViews.dll">
-      <publishTime>11/12/2018 10:11:36</publishTime>
+      <publishTime>12/02/2018 21:12:00</publishTime>
     </File>
     <File Include="KovalukApp.PrecompiledViews.pdb">
-      <publishTime>11/12/2018 10:11:36</publishTime>
+      <publishTime>12/02/2018 21:12:00</publishTime>
     </File>
     <File Include="KovalukApp.runtimeconfig.json">
-      <publishTime>11/12/2018 10:15:15</publishTime>
+      <publishTime>12/02/2018 21:12:08</publishTime>
     </File>
     <File Include="MailKit.dll">
-      <publishTime>04/08/2018 09:23:18</publishTime>
+      <publishTime>08/04/2018 09:23:18</publishTime>
     </File>
     <File Include="Microsoft.AI.DependencyCollector.dll">
       <publishTime>09/10/2018 21:26:10</publishTime>
@@ -119,7 +119,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.ApplicationInsights.HostingStartup.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.Abstractions.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -161,10 +161,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.AzureAppServicesIntegration.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.CookiePolicy.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -200,7 +200,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -230,10 +230,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Identity.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.JsonPatch.dll">
       <publishTime>07/25/2017 00:48:04</publishTime>
@@ -329,19 +329,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Https.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Session.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -485,10 +485,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Identity.Core.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Identity.Stores.dll">
-      <publishTime>03/07/2018 02:25:46</publishTime>
+      <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Localization.Abstractions.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
@@ -545,16 +545,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/29/2017 05:45:04</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Logging.dll">
-      <publishTime>11/06/2017 20:59:08</publishTime>
+      <publishTime>06/11/2017 20:59:08</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Protocols.dll">
-      <publishTime>11/06/2017 20:59:42</publishTime>
+      <publishTime>06/11/2017 20:59:42</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
-      <publishTime>11/06/2017 20:59:52</publishTime>
+      <publishTime>06/11/2017 20:59:52</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Tokens.dll">
-      <publishTime>11/06/2017 20:59:18</publishTime>
+      <publishTime>06/11/2017 20:59:18</publishTime>
     </File>
     <File Include="Microsoft.Net.Http.Headers.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
@@ -593,7 +593,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2018 21:25:42</publishTime>
     </File>
     <File Include="MimeKit.dll">
-      <publishTime>04/08/2018 09:04:34</publishTime>
+      <publishTime>08/04/2018 09:04:34</publishTime>
     </File>
     <File Include="Newtonsoft.Json.Bson.dll">
       <publishTime>09/10/2018 21:25:44</publishTime>
@@ -641,7 +641,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2018 21:25:47</publishTime>
     </File>
     <File Include="runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll">
-      <publishTime>12/02/2018 11:21:14</publishTime>
+      <publishTime>02/12/2018 11:21:14</publishTime>
     </File>
     <File Include="runtimes/win-arm/native/libuv.dll">
       <publishTime>09/10/2018 21:25:47</publishTime>
@@ -665,7 +665,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/19/2017 10:01:36</publishTime>
     </File>
     <File Include="runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll">
-      <publishTime>12/02/2018 11:21:14</publishTime>
+      <publishTime>02/12/2018 11:21:14</publishTime>
     </File>
     <File Include="runtimes/win7-x64/native/e_sqlite3.dll">
       <publishTime>06/28/2017 14:54:16</publishTime>
@@ -704,10 +704,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2018 21:25:51</publishTime>
     </File>
     <File Include="System.Data.SqlClient.dll">
-      <publishTime>12/02/2018 11:21:12</publishTime>
+      <publishTime>02/12/2018 11:21:12</publishTime>
     </File>
     <File Include="System.IdentityModel.Tokens.Jwt.dll">
-      <publishTime>11/06/2017 20:59:28</publishTime>
+      <publishTime>06/11/2017 20:59:28</publishTime>
     </File>
     <File Include="System.Interactive.Async.dll">
       <publishTime>09/10/2018 21:25:47</publishTime>
@@ -728,97 +728,97 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/19/2017 10:01:30</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/12/2018 10:15:15</publishTime>
+      <publishTime>12/02/2018 21:12:09</publishTime>
     </File>
     <File Include="wwwroot/Colorize/Colorize.js">
       <publishTime>09/17/2018 12:26:27</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/CHANGELOG.md">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.common.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.esm.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.min.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.min.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/LICENSE">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/package.json">
       <publishTime>10/12/2018 22:55:21</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/README.md">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/css/cropper.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/css/cropper.scss">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/images/bg.png">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.scss">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/change.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/constants.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/cropper.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/defaults.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/events.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/handlers.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/methods.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/preview.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/render.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/template.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/utilities.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/types/index.d.ts">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/dist/Css/Main.css">
-      <publishTime>11/11/2018 13:54:59</publishTime>
+      <publishTime>11/27/2018 18:19:45</publishTime>
     </File>
     <File Include="wwwroot/dist/Css/Preloader.css">
       <publishTime>09/28/2018 16:59:34</publishTime>
@@ -827,10 +827,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2018 23:58:07</publishTime>
     </File>
     <File Include="wwwroot/dist/js/Cropper/CroppingNews.js">
-      <publishTime>05/11/2018 12:27:08</publishTime>
+      <publishTime>11/05/2018 12:27:08</publishTime>
     </File>
     <File Include="wwwroot/dist/js/Cropper/CroppingStudent.js">
-      <publishTime>10/16/2018 20:03:15</publishTime>
+      <publishTime>12/02/2018 15:35:38</publishTime>
     </File>
     <File Include="wwwroot/dist/js/init.js">
       <publishTime>10/14/2018 23:25:40</publishTime>
@@ -842,13 +842,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/27/2018 21:54:22</publishTime>
     </File>
     <File Include="wwwroot/dist/js/TextFill/TextFill.js">
-      <publishTime>03/10/2018 17:17:49</publishTime>
+      <publishTime>10/03/2018 17:17:49</publishTime>
     </File>
     <File Include="wwwroot/Docs.xd">
       <publishTime>10/31/2018 23:52:01</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
-      <publishTime>09/10/2018 23:55:10</publishTime>
+      <publishTime>10/09/2018 23:55:10</publishTime>
     </File>
     <File Include="wwwroot/FileExtansions/.png">
       <publishTime>06/22/2016 15:37:50</publishTime>
@@ -1001,7 +1001,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/24/2017 22:03:58</publishTime>
     </File>
     <File Include="wwwroot/img/bits.jpg">
-      <publishTime>09/10/2018 00:01:14</publishTime>
+      <publishTime>10/09/2018 00:01:14</publishTime>
     </File>
     <File Include="wwwroot/img/blur-close-up-code-546819.jpg">
       <publishTime>11/11/2018 12:02:28</publishTime>
@@ -1019,7 +1019,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/20/2018 21:06:57</publishTime>
     </File>
     <File Include="wwwroot/img/KPI.jpg">
-      <publishTime>08/10/2018 23:17:26</publishTime>
+      <publishTime>10/08/2018 23:17:26</publishTime>
     </File>
     <File Include="wwwroot/img/KPI01.png">
       <publishTime>09/16/2017 20:40:10</publishTime>
@@ -1037,7 +1037,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/11/2018 22:35:20</publishTime>
     </File>
     <File Include="wwwroot/Logotype.png">
-      <publishTime>08/10/2018 20:13:30</publishTime>
+      <publishTime>10/08/2018 20:13:30</publishTime>
     </File>
     <File Include="wwwroot/materialized/matelialized.css">
       <publishTime>09/16/2018 15:27:29</publishTime>

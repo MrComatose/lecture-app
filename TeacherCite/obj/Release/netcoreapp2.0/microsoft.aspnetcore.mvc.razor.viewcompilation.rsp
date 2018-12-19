@@ -8,7 +8,9 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Documentation\List.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Documentation\ShowPage.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Documentation\TaskError.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Group\List.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Task\AddTaskFile.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Task\List.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Task\Perform.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\Task\ShowTask.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Student\Views\_ViewImports.cshtml
@@ -37,6 +39,7 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Users\List.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\_ViewImports.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\_ViewStart.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Account\ChangePassword.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Account\Login.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Account\Profile.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Home\Main.cshtml
@@ -46,6 +49,7 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\Components\TeacherProfile\Default.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\EmailRegistration.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\ManagerLayout.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\ResetPassword.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\_FormLayout.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\Shared\_MainLayout.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Views\_ViewImports.cshtml

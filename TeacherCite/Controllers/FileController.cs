@@ -32,7 +32,12 @@ namespace KovalukApp.Controllers
         public IActionResult NewsPhoto(int NewsID)
         {
             var filename = News.AllNews.First(x=>x.NewsID==NewsID).Name+".png";
-            return File(repository.AllFiles.FirstOrDefault(x => x.FileName == filename).Value, "application/octet-stream", filename);
+            var bytes = repository.AllFiles.FirstOrDefault(x => x.FileName == filename)?.Value;
+            if (bytes==null)
+            {
+                return StatusCode(404);
+            }else
+            return File(bytes, "application/octet-stream", filename);
         }
     }
 }

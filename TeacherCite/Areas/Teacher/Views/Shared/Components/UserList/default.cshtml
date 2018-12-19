@@ -1,0 +1,35 @@
+﻿@model IList<IUser>
+
+
+<ul class="collection">
+
+    @foreach (var user in Model)
+    {
+        <li class="collection-item avatar z-depth-2">
+            <a asp-area="" asp-action="Profile" asp-controller="Account" asp-route-username="@(user.UserName)" asp-route-returnUrl="/Teacher/Users/List">
+                @if (user.Avatar == null)
+                {
+                    <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                }
+                else
+                {
+                    <img class="circle" style="object-fit: cover;" src="/File/Photo/@user.UserName">
+                }
+
+                <span class="title">@user.FirstName @user.LastName</span>
+                <p>
+                    @user.Email <br>
+                    @user.UserName
+                </p>
+            </a>
+            <div class="secondary-content">
+                <a class="btn-floating btn-small waves-effect waves-light red" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@user.UserName" asp-route-returnUrl="/Teacher/Users/List"><i class="material-icons">edit</i></a>
+
+
+            </div>
+
+
+        </li>
+    }
+</ul>
+

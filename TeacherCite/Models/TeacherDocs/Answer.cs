@@ -8,9 +8,13 @@ namespace KovalukApp.Models
     public class Answer
     {
         public int StTaskID { get; set; }
+
         public string UserID { get; set; }
+
         public string TextData { get; set; }
+
         public int AnswerID { get; set; }
+
         public DateTime AnswerDate { get; set; }
     }
 }

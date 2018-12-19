@@ -24,6 +24,16 @@
                             }
 
                         </blockquote>
+                        <div class="input-field col l6 s12">
+                            <label asp-for="FirstName">First name:</label>
+                            <input disabled asp-for="FirstName" />
+                            <span asp-validation-for="FirstName" class="red-text"></span>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <label asp-for="LastName">Last name:</label>
+                            <input disabled asp-for="LastName" />
+                            <span asp-validation-for="LastName" class="red-text"></span>
+                        </div>
                         <div class=" input-field col l6 s12">
                             <label asp-for="Email">Email:</label>
                             <input asp-for="Email" />
@@ -36,16 +46,7 @@
                         </div>
 
 
-                        <div class="input-field col l6 s12">
-                            <label asp-for="FirstName">First name:</label>
-                            <input asp-for="FirstName" />
-                            <span asp-validation-for="FirstName" class="red-text"></span>
-                        </div>
-                        <div class="input-field col l6 s12">
-                            <label asp-for="LastName">Last name:</label>
-                            <input asp-for="LastName" />
-                            <span asp-validation-for="LastName" class="red-text"></span>
-                        </div>
+
                         <div class="input-field col l6 s12">
                             <i class="material-icons prefix">phone</i>
                             <label asp-for="PhoneNumber">Phone number:</label>

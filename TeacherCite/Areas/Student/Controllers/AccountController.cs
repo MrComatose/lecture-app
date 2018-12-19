@@ -183,8 +183,7 @@ namespace KovalukApp.Areas.Student.Controllers
                 user.Description = edited.Description;
                 user.PhoneNumber = edited.PhoneNumber;
                 user.UserName = edited.UserName;
-                user.FirstName = edited.FirstName;
-                user.LastName = edited.LastName;
+              
                 if (edited.NewAvatar != null)
                 {
                     using (var binaryReader = new BinaryReader(edited.NewAvatar.OpenReadStream()))

@@ -20,11 +20,7 @@ namespace KovalukApp.Areas.Admin.Controllers
             repository = repo;
             manager = mng;
         }
-        [HttpGet]
-        public IActionResult Add(string returnUrl)
-        {
-            return View();
-        } 
+        
         [HttpPost]
         public async Task<IActionResult> ChekVisit(string UserName,int LectureID)
         {

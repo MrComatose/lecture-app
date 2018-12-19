@@ -90,10 +90,23 @@ namespace KovalukApp.Areas.Student.Controllers
             lock (TaskLocker)
             {
               var task=  Docs.Tasks.FirstOrDefault(x=>x.StTaskID==StTaskID&&x.UserID==null);
+                
                 if (task!=null)
                 {
-                    task.UserID = user.Id;
-                    Docs.UpdateTask(task);
+                    var isNoElseTasksForThisUser = Docs.Tasks
+                        .FirstOrDefault(x => x.UserID == user.Id && x.DocPageID == task.DocPageID)==null;
+                    var isDocPageFromThisGroup = Docs.Pages
+                        .FirstOrDefault(x => x.DocPageID == task.DocPageID).GroupID == (user as StudentUser).GroupID;
+                    if (isNoElseTasksForThisUser&&isDocPageFromThisGroup)
+                    {
+                        task.UserID = user.Id;
+                        Docs.UpdateTask(task);
+                    }
+                    else
+                    {
+                        return View("TaskError", returnUrl);
+                    }
+                   
                 }else
                 {
                     return View("TaskError",returnUrl);
