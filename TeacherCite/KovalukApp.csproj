@@ -17,6 +17,7 @@
     <Folder Include="Areas\Admin\Models\ViewModel\" />
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Student\Data\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
 
   <ItemGroup>

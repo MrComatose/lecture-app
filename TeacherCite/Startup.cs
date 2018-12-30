@@ -28,7 +28,7 @@ namespace KovalukApp
         public void ConfigureServices(IServiceCollection services)
         {
           services.Configure<RazorViewEngineOptions>(opt => { opt.ViewLocationExpanders.Add(new EmailTemplateExpender()); });
-            services.AddMvc();
+        
             services.AddDbContext<ApplicationContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IUserRepository,UserDataRepository>();
@@ -71,8 +71,14 @@ namespace KovalukApp
                 options.User.RequireUniqueEmail = true;
             
             });
+            services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
 
-           
+            services.AddMvc()
+                .AddViewLocalization(
+                    LanguageViewLocationExpanderFormat.Suffix,
+                    opts => { opts.ResourcesPath = "Resources"; })
+                .AddDataAnnotationsLocalization();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

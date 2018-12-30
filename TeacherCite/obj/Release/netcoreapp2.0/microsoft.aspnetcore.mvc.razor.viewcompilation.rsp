@@ -32,6 +32,8 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Group\ShowGroup.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Group\ShowLecture.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\News\List.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Search\Users.cshtml
+--file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Shared\Components\UserList\default.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Task\AddTask.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Task\List.cshtml
 --file=C:\Users\HP\source\repos\TeacherCite\TeacherCite\Areas\Teacher\Views\Task\Rate.cshtml

@@ -26,12 +26,14 @@
                         </blockquote>
                         <div class="input-field col l6 s12">
                             <label asp-for="FirstName">First name:</label>
-                            <input disabled asp-for="FirstName" />
+                            <input hidden asp-for="FirstName" />
+                            <input disabled value="@Model.FirstName" />
                             <span asp-validation-for="FirstName" class="red-text"></span>
                         </div>
                         <div class="input-field col l6 s12">
                             <label asp-for="LastName">Last name:</label>
-                            <input disabled asp-for="LastName" />
+                            <input hidden asp-for="LastName" />
+                            <input disabled value="@Model.LastName" />
                             <span asp-validation-for="LastName" class="red-text"></span>
                         </div>
                         <div class=" input-field col l6 s12">
