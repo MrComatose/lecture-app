@@ -14,5 +14,5 @@
 * [Версія 2. Клієнтські бібліотеки.](ui/versiya-2.-kliyentski-biblioteki..md)
 * [Версія 3. Механізм обрізання зображень](ui/versiya-3.-mekhanizm-zavantazhennya-avataru..md)
 * [Версія 4. Користувацька документація. Вчитель.](ui/versiya-4.-koristuvacka-dokumentaciya.-vchitel..md)
-* [Версія 5. Користувацька документація. Студента.](ui/versiya-5.-koristuvacka-dokumentaciya.-studenta..md)
+* [Версія 5. Користувацька документація. Студент.](ui/versiya-5.-koristuvacka-dokumentaciya.-studenta..md)
 
