@@ -1,0 +1,225 @@
+﻿@model StudentProgressViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.User.UserName;
+    ViewBag.Return = Model.returnUrl;
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col m6">
+            <div class="card ">
+
+                <div class="card-title orange white-text center">
+                    @Model.User.FirstName @Model.User.LastName
+                    <span class="badge teal white-text">Акаунт студента</span>
+                </div>
+
+                <div class="card-content">
+                    <div class="row  center ">
+
+
+
+                        @if (Model.User.Avatar == null)
+                        {
+                            <img id="blah" class="circle" style="object-fit: cover;width:100px;height:100px;" src="~/img/img_avatar.png">
+                        }
+                        else
+                        {
+                            <img id="blah" class="circle" style="object-fit: cover;width:100px;height:100px;" src="data:image;base64,@(Convert.ToBase64String(Model.User.Avatar))">
+                        }
+                        <p class="red white-text">@Model.User.Email</p>
+                        <p class="orange white-text">@Model.User.PhoneNumber</p>
+                        <br />
+
+                        @Html.Raw(Model.HtmlData)
+                        <div class="card-panel teal">
+                            <span class="white-text">
+                                @Model.Group.GroupName  <span class="chip blue white-text">Рік навчання:@Model.Group.YearOfStudy</span>
+                                <br />
+                                @Model.Group.Description<br />
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="col s12 show-on-medium-and-up">
+                <ul class="tabs">
+                    <li class="tab col s6"><a class="active" href="#lectures">Лекції <span class="badge purple white-text">@Model.VisitedLectures.Count/@(Model.VisitedLectures.Count + Model.UnvisitedLectures.Count)</span></a></li>
+
+                    <li class="tab col s6"><a class="active" href="#Task"><span class="blue white-text badge">@Model.Tasks.Count </span>Задачі</a></li>
+
+                </ul>
+            </div>
+            <div id="lectures">
+                <div class="row">
+                    <div class="col s12 ">
+                        @if ((Model.VisitedLectures.Count() + Model.UnvisitedLectures.Count() != 0))
+                        {
+                            <div class="card-panel teal">
+                                <span class="white-text">
+                                    Інформація про всі відвідування лекцій студентом..<br />
+                                    <span class="chip blue white-text">Відвідуваність: @(Model.VisitedLectures.Count * 100 / (Model.VisitedLectures.Count + Model.UnvisitedLectures.Count))%</span>
+                                    <br />
+                                </span>
+                            </div>
+                        }
+                    </div>
+                    <div class="col s6 ">
+                        @if (Model.VisitedLectures.Count() == 0)
+                        {
+                            <blockquote>
+                                <h5> Немає відвідувань.</h5>
+
+                            </blockquote>
+                        }
+                        else
+                        {
+
+
+
+
+                            <ul class="collapsible green lighten-3" data-collapsible="accordion">
+
+                                @foreach (var lecture in Model.VisitedLectures)
+                                {
+
+                                    <li class="">
+                                        <div class="collapsible-header green white-text"><i class="material-icons">arrow_drop_down</i>@lecture.Date.ToShortDateString()<br /> в  @lecture.Place </div>
+                                        <div class="collapsible-body">
+
+                                            <p>@lecture.Description</p>
+
+
+                                        </div>
+                                    </li>
+                                }
+
+
+                            </ul>
+
+
+
+
+
+
+                        }
+                    </div>
+                    <div class="col s6 ">
+                        @if (Model.UnvisitedLectures.Count() == 0)
+                        {
+                            <blockquote>
+                                <h5> Немає пропусків!</h5>
+
+                            </blockquote>
+                        }
+                        else
+                        {
+
+
+
+
+                            <ul class="collapsible red lighten-3" data-collapsible="accordion">
+
+                                @foreach (var lecture in Model.UnvisitedLectures)
+                                {
+
+                                    <li class="">
+                                        <div class="collapsible-header red white-text"><i class="material-icons">arrow_drop_down</i>@lecture.Date.ToShortDateString()<br /> в  @lecture.Place </div>
+                                        <div class="collapsible-body">
+
+                                            <p>@lecture.Description</p>
+
+
+                                        </div>
+                                    </li>
+                                }
+
+
+                            </ul>
+
+
+
+
+
+
+                        }
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="Task">
+                <div class="row">
+                   
+                    <div class="col s12">
+                        @if (Model.Tasks.Count()!=0)
+                        {
+                            <div class="card-panel teal">
+                                <span class="white-text">
+                                    Інформація про персональні завдання студента.<br />
+                                    <span class="chip blue white-text">Загальний рейтинг: @Model.Tasks.Select(x => x.CurrentCost).Sum()/@Model.Tasks.Select(x => x.MaxCost).Sum() or @(Model.Tasks.Select(x => x.CurrentCost).Sum() * 100 / Model.Tasks.Select(x => x.MaxCost).Sum())%</span>
+                                    <br />
+
+                                    <span class="chip green white-text">Найвища оцінка: @Model.Tasks.Select(x => x.CurrentCost).Max() </span>
+                                    <br />
+                                    <span class="chip red white-text">Найнижча оцінка: @Model.Tasks.Select(x => x.CurrentCost).Min() </span>
+                                </span>
+                            </div>
+                        }
+                        <ul class="collapsible  teal lighten-5" data-collapsible="accordion">
+                            @foreach (var task in Model.Tasks)
+                            {
+
+                                <li>
+                                    <div class="collapsible-header teal lighten-4">
+                                        <i class="material-icons">arrow_drop_down</i>@task.Name
+
+
+
+                                    </div>
+                                    <div class="collapsible-body ">
+                                        <div class="chips">
+                                            <div class="chip teal  white-text">Оцінка: @task.CurrentCost/@task.MaxCost</div>
+                                            <div class="chip blue  white-text">Дедлайн: @task.DeadLine.ToShortDateString()</div>
+                                        </div>
+
+                                        <p> @task.Description</p>
+                                        <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Вибрати</a>
+
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+
+
+                    </div>
+                </div>
+
+                <script>
+
+                    $(document).ready(function () {
+                        $('.tabs').tabs();
+                    });
+                    $(document).ready(function () {
+                        $('.collapsible').collapsible();
+                    });
+
+
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>

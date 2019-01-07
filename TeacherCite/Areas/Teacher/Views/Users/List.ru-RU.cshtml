@@ -1,0 +1,88 @@
+﻿@model UserListViewModel
+@{
+    ViewBag.Title = "Пользователи";
+    Layout = "ManagerLayout";
+    ViewBag.Icon = "assignment";
+   
+}
+
+
+@section Menu{
+<div>
+    <h5 href="#!" class="collection-item">Все пользователи<span class="badge blue white-text">@Model.Count</span></h5>
+    <div class="input-field ">
+        <i class="material-icons prefix">search</i>
+        <input id="icon_prefix" oninput="getUsers(this.value)" type="text" class="validate">
+        <label for="icon_prefix">Поиск пользователя</label>
+    </div>
+ 
+    
+</div>
+
+}
+<div id="list">
+    @await Component.InvokeAsync("UserList", Model.Users)
+</div>
+
+   
+
+
+    @*Pagination*@
+    <div class="center">
+
+        <ul class="pagination">
+            @if (Model.Count > 5)
+            {
+                if (Model.PageNumber == 0)
+                {
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                }
+                else
+                {
+                    <li class="waves-effect"><a asp-action="List" asp-route-page=@(Model.PageNumber-1)><i class="material-icons">chevron_left</i></a></li>
+                }
+                if (Model.PageNumber >= 2)
+                {
+                    for (int i = Model.PageNumber - 2; i <= ((Model.Count / 5) - Model.PageNumber >= 2 ? Model.PageNumber + 2 : (Model.Count / 5)); i++)
+                    {
+                        if (i == Model.PageNumber)
+                        {
+                            <li class="active"><a asp-action="List" asp-route-page="@i">@(i+1)</a></li>
+                        }
+                        else
+                        {
+                            <li class="waves-effect"><a asp-action="List" asp-route-page="@i">@(i+1)</a></li>
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i <= ((Model.Count / 5) - Model.PageNumber > 4 ? Model.PageNumber + 4 : (Model.Count / 5)); i++)
+                    {
+                        if (i == Model.PageNumber)
+                        {
+                            <li class="active"><a asp-action="List" asp-route-page="@i">@(i+1)</a></li>
+                        }
+                        else
+                        {
+                            <li class="waves-effect"><a asp-action="List" asp-route-page="@i">@(i+1)</a></li>
+                        }
+                    }
+                }
+
+
+                if (Model.PageNumber == Model.Count / 5)
+                {
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                }
+                else
+                {
+                    <li class="waves-effect"><a asp-action="List" asp-route-page=@(Model.PageNumber+1)><i class="material-icons">chevron_right</i></a></li>
+                }
+
+            }
+
+        </ul>
+    </div>
+
+    <script src="~/dist/js/Search/Users.js"></script>

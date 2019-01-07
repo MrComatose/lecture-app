@@ -1,0 +1,155 @@
+﻿@model IEnumerable<News>
+@{
+    ViewBag.Title = "Головна";
+}
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text ">Сайт Викладача</h1>
+            <div class="row center">
+                <h5 class="header col s12 teal-text text-lighten-1">Цей веб додаток створений щоб покращити навчальний процес на кафедрі АСОІУ КПІ.</h5>
+            </div>
+            <div class="row center">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <h4 class="teal-text text-lighten-1">Вітаємо, @User.Identity.Name!</h4>
+                }
+                else
+                {
+                    <a href="Account/Login" id="download-button" class="btn-large waves-effect waves-light teal">Увійти</a>
+                }
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="~/img/computer-desk-electronics-238118.jpg" height="1000" alt="Unsplashed background img 1"></div>
+</div>
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                
+                @await Component.InvokeAsync("TeacherProfile")
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">Прискорення</h5>
+
+                    <p class="light">Система моніторингу завдань створена щоб прискориит взаємодію студентів та викладача. </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">Студентський досвід</h5>
+
+                    <p class="light">Додаток розроблений студентом кафедри АСОІУ, що свідчить про розуміння предметної області.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                    <h5 class="center">Легкий в роботі</h5>
+
+                    <p class="light">Користувацький інтерфейс розроблявся з метою зробити його простим у використанні та сумісним з користувацьким досвідом більшості.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container ">
+    <div class="section">
+
+        <div class="row">
+            @if (Model.Count() != 0)
+            {
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h1>Новини</h1>
+                </div>
+                <div class="col s12 black-text">
+
+
+                    <div class="row">
+                        @foreach (var news in Model)
+                        {
+
+
+                           
+
+                                <div class="card horizontal hide-on-small-only">
+                                    <div class="card-image">
+                                        <img class="responsive-img " src="/File/NewsPhoto?NewsID=@(news.NewsID)">
+                                    </div>
+                                    <div class="card-stacked " style="overflow:auto; height:400px;">
+                                        <div class="card-content">
+                                            <h4 class="card-title">@news.Name <span class="badge orange chip white-text">@news.PublicationDate.ToShortDateString()</span></h4>
+                                            <p>@news.TextData</p>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="card show-on-small hide-on-med-and-up">
+                                    <div class="card-image">
+                                        <img class="responsive-img " src="/File/NewsPhoto?NewsID=@(news.NewsID)">
+                                        <span class="card-title ">@news.PublicationDate.ToShortDateString()</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>@news.Name</h5>
+
+                                        <p>
+                                            @news.TextData
+                                        </p>
+                                    </div>
+                                   
+                                </div>
+
+
+
+
+
+
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+ 
+
+   
+
+</script>

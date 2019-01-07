@@ -1,0 +1,54 @@
+﻿@model AddDocPageViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Додати документацію " +Model.GroupName;
+
+}
+
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m8 pull-m2 l6 pull-l3">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="AddDocPage">
+                <input type="hidden" value=@Model.GroupID asp-for="GroupID" />
+                <input type="hidden" value=@Model.returnUrl asp-for="returnUrl" />
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div>
+                    <label asp-for="Name">Назва:</label><br />
+                    <input asp-for="Name" />
+                    <span asp-validation-for="Name" class="red-text"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Date">Дата:</label>
+
+                    <input class="datepicker" type="text" asp-for="Date" value="@DateTime.Now" />
+
+                    <span asp-validation-for="Date" class="red-text"></span>
+                </div>
+
+               
+
+                <div>
+                    <input type="submit" class="btn " value="Додати" />
+                    <a href="@Model.returnUrl" class="btn red">Відміна</a>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+<script>
+
+
+    $(document).ready(function () {
+        $('.timepicker').timepicker();
+    });
+
+    $(document).ready(function () {
+        $('.datepicker').datepicker();
+    });
+</script>

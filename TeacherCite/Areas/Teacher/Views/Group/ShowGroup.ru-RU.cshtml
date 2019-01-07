@@ -1,0 +1,143 @@
+﻿@model ShowGroupViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.Group.GroupName + " страница";
+    ViewBag.Icon = "group";
+    ViewBag.Return = Model.returnUrl;
+}
+
+
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#lectures"><span class="orange white-text badge">@Model.Lectures.Count </span>Лекции</a></li>
+                <li class="tab col s3"><a class="active" href="#students"><span class="blue white-text badge">@Model.Users.Count </span>Студенты</a></li>
+
+            </ul>
+        </div>
+        <div id="lectures">
+            <div class="row">
+                <div class="col s12 m3">
+                    <div class="collection">
+                        <a asp-action="AddLecture" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-GroupID=@Model.Group.GroupID class="collection-item blue white-text">Добавить лекцию</a>
+                    </div>
+                </div>
+                <div class="col s12 m9" >
+                    @if (Model.Lectures.Count() == 0)
+                    {
+                        <blockquote>
+                            <h1>Список лекций пуст!</h1>
+
+                        </blockquote>
+                    }
+                    else
+                    {
+
+
+
+
+                        <ul class="collapsible" data-collapsible="accordion">
+                            
+                            @foreach (var lecture in Model.Lectures)
+                            {
+                                
+                                <li >
+                                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>@lecture.Date.Day.@lecture.Date.Month.@lecture.Date.Year  в  @lecture.Place <span class="@(lecture.Visits?.Count==Model.Users.Count?"green-text":"orange-text") badge">@(lecture.Visits?.Count??0)/@Model.Users.Count</span></div>
+                                    <div class="collapsible-body">
+                                        
+                                        <p>@lecture.Description</p>
+                                        
+                                        <a asp-action="ShowLecture" class="green-text" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-LectureID="@lecture.LectureID">Открыть</a>
+                                        <a asp-action="RemoveLecture" class="red-text right" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-LectureID="@lecture.LectureID">Удалить</a>
+
+                                    </div>
+                                </li>
+                            } 
+
+
+                        </ul>
+
+
+
+
+
+
+                    }
+                </div>
+            </div>
+
+
+        </div>
+        <div id="students">
+
+            <div class="row">
+                <div class="col m3 s12">
+
+                    <div class="collection">
+                       
+                        <a asp-action="CreateStudentAccount" asp-controller="Account" asp-route-GroupID=@Model.Group.GroupID asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="collection-item blue white-text">Создать уч. запись студента</a>
+
+                    </div>
+
+
+                </div>
+                <div class="col l9 s12" >
+
+
+
+                    @if (Model.Users.Count == 0)
+                    {
+                        <blockquote>
+                            <h1>В группе нет студентов.</h1>
+                        </blockquote>
+                    }
+                    else
+                    {
+                        <ul class="collection">
+                            @foreach (var user in Model.Users)
+                            {
+                                <li class="collection-item avatar z-depth-2">
+                                    <a asp-controller="Account" asp-action="StudentProfile" asp-route-username="@user.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+                                        @if (user.Avatar == null)
+                                        {
+                                            <img class="circle" style="object-fit: cover; " src="~/img/img_avatar.png">
+                                        }
+                                        else
+                                        {
+                                            <img class="circle" style="object-fit: cover;" src="/File/Photo/@user.UserName">
+                                        }
+
+                                        <span class="title">@user.FirstName @user.LastName</span>
+                                        <p>
+                                            @user.Email <br>
+                                            @user.UserName
+                                        </p>
+                                    </a>
+                                    <div class="secondary-content">
+
+                                        <a class="btn-floating btn-large waves-effect waves-light red" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@user.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">edit</i></a>
+
+                                    </div>
+
+
+                                </li>
+
+                            }
+                        </ul>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+ 
+        <script>
+          
+            $(document).ready(function () {
+                $('.tabs').tabs();
+            });
+            $(document).ready(function () {
+                $('.collapsible').collapsible();
+            });
+
+
+        </script>

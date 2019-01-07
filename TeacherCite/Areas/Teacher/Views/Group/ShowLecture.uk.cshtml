@@ -1,0 +1,55 @@
+﻿@model ShowLectureList
+@{
+
+    Layout = "ManagerLayout";
+    ViewBag.Title = " Lecture Visits";
+    ViewBag.Return = Model.returnUrl;
+}
+<script src="~/dist/js/ShowLecture/Checked.js">
+   
+
+</script>
+
+<div class="container">
+
+    <table>
+        <thead>
+            <tr>
+              
+                <th>Ім'я Прізвище</th>
+                <th>Номер залікової книжки</th>
+           
+                <th>
+                    Відвідуваність
+                </th>
+            </tr>
+        </thead>
+   
+   
+        
+            <tbody >
+
+                @foreach (var item in Model.list)
+                {
+
+                    <tr>
+                    
+                        <td>@item.LastName @item.FirstName</td>
+                        <td>@item.Number</td>
+                    
+                        <td>
+                          
+                            <label>
+                            <input onchange="checkedVisit('@item.LectureID','@item.Username');" type="checkbox"  class="filled-in"  @(item.Was?"checked":"") />
+                            <span>Відвідування</span>
+                          </label>
+
+                        </td>
+
+                    </tr>
+                }
+            
+
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<News>
+@{
+    ViewBag.Title = "Главная";
+}
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text ">Сайт преподавателя</h1>
+            <div class="row center">
+                <h5 class="header col s12 teal-text text-lighten-1">Приложение создавалось с целью улучшить процес обучения на кафедре АСОИУ КПИ.</h5>
+            </div>
+            <div class="row center">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <h4 class="teal-text text-lighten-1">Добро пожаловать, @User.Identity.Name!</h4>
+                }
+                else
+                {
+                    <a href="Account/Login" id="download-button" class="btn-large waves-effect waves-light teal">Войти</a>
+                }
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="~/img/computer-desk-electronics-238118.jpg" height="1000" alt="Unsplashed background img 1"></div>
+</div>
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                
+                @await Component.InvokeAsync("TeacherProfile")
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+       
+
+    </div>
+</div>
+
+
+
+<div class="container ">
+    <div class="section">
+
+        <div class="row">
+            @if (Model.Count() != 0)
+            {
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h1>Новости</h1>
+                </div>
+                <div class="col s12 black-text">
+
+
+                    <div class="row">
+                        @foreach (var news in Model)
+                        {
+
+
+                           
+
+                                <div class="card horizontal hide-on-small-only">
+                                    <div class="card-image">
+                                        <img class="responsive-img " src="/File/NewsPhoto?NewsID=@(news.NewsID)">
+                                    </div>
+                                    <div class="card-stacked " style="overflow:auto; height:400px;">
+                                        <div class="card-content">
+                                            <h4 class="card-title">@news.Name <span class="badge orange chip white-text">@news.PublicationDate.ToShortDateString()</span></h4>
+                                            <p>@news.TextData</p>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="card show-on-small hide-on-med-and-up">
+                                    <div class="card-image">
+                                        <img class="responsive-img " src="/File/NewsPhoto?NewsID=@(news.NewsID)">
+                                        <span class="card-title ">@news.PublicationDate.ToShortDateString()</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>@news.Name</h5>
+
+                                        <p>
+                                            @news.TextData
+                                        </p>
+                                    </div>
+                                   
+                                </div>
+
+
+
+
+
+
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+ 
+
+   
+
+</script>

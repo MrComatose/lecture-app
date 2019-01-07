@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AngleSharp.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/15/2018 23:26:24</publishTime>
     </File>
     <File Include="BouncyCastle.Crypto.dll">
       <publishTime>04/10/2018 13:45:44</publishTime>
@@ -20,118 +20,121 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2018 19:37:37</publishTime>
     </File>
     <File Include="CommonMark.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>02/20/2017 19:48:58</publishTime>
     </File>
     <File Include="Config.json">
       <publishTime>11/11/2018 19:22:31</publishTime>
     </File>
     <File Include="de/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:10</publishTime>
+      <publishTime>12/05/2018 17:50:10</publishTime>
     </File>
     <File Include="de/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:13</publishTime>
+      <publishTime>12/05/2018 17:50:13</publishTime>
     </File>
     <File Include="de/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="dotnet-aspnet-codegenerator-design.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
+    </File>
+    <File Include="en-US/KovalukApp.resources.dll">
+      <publishTime>01/06/2019 21:30:39</publishTime>
     </File>
     <File Include="es/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:10</publishTime>
+      <publishTime>12/05/2018 17:50:10</publishTime>
     </File>
     <File Include="es/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="es/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="fr/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:10</publishTime>
+      <publishTime>12/05/2018 17:50:10</publishTime>
     </File>
     <File Include="fr/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="fr/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="HtmlSanitizer.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/18/2018 12:04:24</publishTime>
     </File>
     <File Include="it/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:10</publishTime>
+      <publishTime>12/05/2018 17:50:10</publishTime>
     </File>
     <File Include="it/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="it/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="ja/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:11</publishTime>
+      <publishTime>12/05/2018 17:50:11</publishTime>
     </File>
     <File Include="ja/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="ja/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="ko/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:11</publishTime>
+      <publishTime>12/05/2018 17:50:11</publishTime>
     </File>
     <File Include="ko/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="ko/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="KovalukApp.deps.json">
-      <publishTime>12/19/2018 07:13:34</publishTime>
+      <publishTime>01/06/2019 21:39:35</publishTime>
     </File>
     <File Include="KovalukApp.dll">
-      <publishTime>12/02/2018 21:11:42</publishTime>
+      <publishTime>01/06/2019 21:30:38</publishTime>
     </File>
     <File Include="KovalukApp.pdb">
-      <publishTime>12/19/2018 05:34:52</publishTime>
+      <publishTime>01/06/2019 21:30:38</publishTime>
     </File>
     <File Include="KovalukApp.PrecompiledViews.dll">
-      <publishTime>12/02/2018 21:12:00</publishTime>
+      <publishTime>01/06/2019 21:31:00</publishTime>
     </File>
     <File Include="KovalukApp.PrecompiledViews.pdb">
-      <publishTime>12/19/2018 05:35:16</publishTime>
+      <publishTime>01/06/2019 21:31:00</publishTime>
     </File>
     <File Include="KovalukApp.runtimeconfig.json">
-      <publishTime>12/19/2018 07:13:34</publishTime>
+      <publishTime>01/06/2019 21:39:35</publishTime>
     </File>
     <File Include="MailKit.dll">
       <publishTime>08/04/2018 09:23:18</publishTime>
     </File>
     <File Include="Microsoft.AI.DependencyCollector.dll">
-      <publishTime>05/12/2018 17:50:34</publishTime>
+      <publishTime>12/05/2018 17:50:34</publishTime>
     </File>
     <File Include="Microsoft.ApplicationInsights.AspNetCore.dll">
-      <publishTime>05/12/2018 17:50:34</publishTime>
+      <publishTime>12/05/2018 17:50:34</publishTime>
     </File>
     <File Include="Microsoft.ApplicationInsights.dll">
-      <publishTime>05/12/2018 17:50:34</publishTime>
+      <publishTime>12/05/2018 17:50:34</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Antiforgery.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.ApplicationInsights.HostingStartup.dll">
       <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.Cookies.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.Core.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.Facebook.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -155,10 +158,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authorization.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authorization.Policy.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup.dll">
       <publishTime>07/03/2018 02:25:46</publishTime>
@@ -170,31 +173,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Cors.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Cryptography.Internal.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.DataProtection.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.DataProtection.AzureStorage.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.DataProtection.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.DataProtection.Extensions.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Diagnostics.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Diagnostics.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -203,31 +206,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Hosting.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Hosting.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Hosting.Server.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Html.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Http.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Http.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Http.Extensions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Http.Features.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.HttpOverrides.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Identity.dll">
       <publishTime>07/03/2018 02:25:46</publishTime>
@@ -236,7 +239,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.JsonPatch.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/25/2017 00:48:04</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Localization.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -248,25 +251,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.ApiExplorer.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Core.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Cors.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.DataAnnotations.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Formatters.Json.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Formatters.Xml.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -275,19 +278,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Razor.Extensions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.RazorPages.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.TagHelpers.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.ViewFeatures.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.NodeServices.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -296,13 +299,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Razor.Language.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Razor.Runtime.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.ResponseCaching.Abstractions.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
@@ -317,16 +320,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Routing.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Routing.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.HttpSys.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.IISIntegration.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
       <publishTime>07/03/2018 02:25:46</publishTime>
@@ -347,43 +350,43 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.SpaServices.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.StaticFiles.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.WebSockets.dll">
       <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.WebUtilities.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.Azure.KeyVault.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="Microsoft.Azure.KeyVault.WebKey.dll">
-      <publishTime>05/12/2018 17:50:09</publishTime>
+      <publishTime>12/05/2018 17:50:09</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2017 14:40:08</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
       <publishTime>07/19/2017 14:40:10</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2017 14:40:06</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:50</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
       <publishTime>07/19/2017 14:40:18</publishTime>
     </File>
     <File Include="Microsoft.Data.Edm.dll">
-      <publishTime>05/12/2018 17:50:06</publishTime>
+      <publishTime>12/05/2018 17:50:06</publishTime>
     </File>
     <File Include="Microsoft.Data.OData.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="Microsoft.Data.Sqlite.dll">
       <publishTime>02/20/2018 19:41:26</publishTime>
@@ -395,25 +398,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:52</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.InMemory.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Sqlite.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Caching.Memory.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Caching.Redis.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
@@ -422,7 +425,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.AzureKeyVault.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
@@ -431,58 +434,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.CommandLine.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.EnvironmentVariables.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.FileExtensions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.Ini.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.Json.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.UserSecrets.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Configuration.Xml.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/25/2017 00:48:04</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyInjection.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/25/2017 00:48:04</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyModel.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/16/2017 15:49:52</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DiagnosticAdapter.dll">
       <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.FileProviders.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.FileProviders.Composite.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.FileProviders.Embedded.dll">
       <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.FileProviders.Physical.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.FileSystemGlobbing.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>02/20/2018 19:41:26</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Hosting.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Identity.Core.dll">
       <publishTime>07/03/2018 02:25:46</publishTime>
@@ -491,28 +494,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2018 02:25:46</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Localization.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Localization.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.AzureAppServices.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.Configuration.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.Console.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.Debug.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Logging.EventSource.dll">
       <publishTime>04/24/2018 00:44:48</publishTime>
@@ -521,22 +524,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.ObjectPool.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/25/2017 00:48:04</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Options.ConfigurationExtensions.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Options.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Extensions.PlatformAbstractions.dll">
-      <publishTime>05/12/2018 17:50:06</publishTime>
+      <publishTime>12/05/2018 17:50:06</publishTime>
     </File>
     <File Include="Microsoft.Extensions.Primitives.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/25/2017 00:48:04</publishTime>
     </File>
     <File Include="Microsoft.Extensions.WebEncoders.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Clients.ActiveDirectory.dll">
       <publishTime>06/29/2017 05:45:04</publishTime>
@@ -557,79 +560,82 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/11/2017 20:59:18</publishTime>
     </File>
     <File Include="Microsoft.Net.Http.Headers.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.Rest.ClientRuntime.Azure.dll">
-      <publishTime>05/12/2018 17:50:15</publishTime>
+      <publishTime>12/05/2018 17:50:15</publishTime>
     </File>
     <File Include="Microsoft.Rest.ClientRuntime.dll">
-      <publishTime>05/12/2018 17:50:15</publishTime>
+      <publishTime>12/05/2018 17:50:15</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.BrowserLink.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>04/24/2018 00:44:48</publishTime>
     </File>
     <File Include="Microsoft.WindowsAzure.Storage.dll">
-      <publishTime>05/12/2018 17:50:05</publishTime>
+      <publishTime>12/05/2018 17:50:05</publishTime>
     </File>
     <File Include="MimeKit.dll">
       <publishTime>08/04/2018 09:04:34</publishTime>
     </File>
     <File Include="Newtonsoft.Json.Bson.dll">
-      <publishTime>05/12/2018 17:50:17</publishTime>
+      <publishTime>12/05/2018 17:50:17</publishTime>
     </File>
     <File Include="Newtonsoft.Json.dll">
-      <publishTime>09/10/2018 21:25:52</publishTime>
+      <publishTime>12/05/2018 17:50:16</publishTime>
     </File>
     <File Include="NuGet.Frameworks.dll">
       <publishTime>02/25/2017 05:44:54</publishTime>
     </File>
     <File Include="Remotion.Linq.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>06/14/2016 23:16:46</publishTime>
+    </File>
+    <File Include="ru-RU/KovalukApp.resources.dll">
+      <publishTime>01/06/2019 21:30:39</publishTime>
     </File>
     <File Include="ru/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:11</publishTime>
+      <publishTime>12/05/2018 17:50:11</publishTime>
     </File>
     <File Include="ru/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="ru/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="runtimes/linux-arm/native/libuv.so">
-      <publishTime>05/12/2018 17:50:07</publishTime>
+      <publishTime>12/05/2018 17:50:07</publishTime>
     </File>
     <File Include="runtimes/linux-arm64/native/libuv.so">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/linux-armel/native/libuv.so">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/linux-x64/native/libe_sqlite3.so">
       <publishTime>06/28/2017 14:53:36</publishTime>
     </File>
     <File Include="runtimes/linux-x64/native/libuv.so">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/linux-x86/native/libe_sqlite3.so">
       <publishTime>06/28/2017 14:53:36</publishTime>
@@ -638,28 +644,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/28/2017 14:53:34</publishTime>
     </File>
     <File Include="runtimes/osx/native/libuv.dylib">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll">
       <publishTime>02/12/2018 11:21:14</publishTime>
     </File>
     <File Include="runtimes/win-arm/native/libuv.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win-arm64/native/sni.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win-x64/native/libuv.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win-x64/native/sni.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win-x86/native/libuv.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win-x86/native/sni.dll">
-      <publishTime>05/12/2018 17:50:08</publishTime>
+      <publishTime>12/05/2018 17:50:08</publishTime>
     </File>
     <File Include="runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll">
       <publishTime>07/19/2017 10:01:36</publishTime>
@@ -686,22 +692,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/28/2017 14:53:48</publishTime>
     </File>
     <File Include="StackExchange.Redis.StrongName.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="System.Composition.AttributedModel.dll">
-      <publishTime>05/12/2018 17:50:01</publishTime>
+      <publishTime>12/05/2018 17:50:01</publishTime>
     </File>
     <File Include="System.Composition.Convention.dll">
-      <publishTime>05/12/2018 17:50:02</publishTime>
+      <publishTime>12/05/2018 17:50:02</publishTime>
     </File>
     <File Include="System.Composition.Hosting.dll">
-      <publishTime>05/12/2018 17:50:02</publishTime>
+      <publishTime>12/05/2018 17:50:02</publishTime>
     </File>
     <File Include="System.Composition.Runtime.dll">
-      <publishTime>05/12/2018 17:50:02</publishTime>
+      <publishTime>12/05/2018 17:50:02</publishTime>
     </File>
     <File Include="System.Composition.TypedParts.dll">
-      <publishTime>05/12/2018 17:50:02</publishTime>
+      <publishTime>12/05/2018 17:50:02</publishTime>
     </File>
     <File Include="System.Data.SqlClient.dll">
       <publishTime>02/12/2018 11:21:12</publishTime>
@@ -710,115 +716,118 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/11/2017 20:59:28</publishTime>
     </File>
     <File Include="System.Interactive.Async.dll">
-      <publishTime>09/10/2018 21:25:47</publishTime>
+      <publishTime>12/05/2018 17:50:13</publishTime>
     </File>
     <File Include="System.Runtime.CompilerServices.Unsafe.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2017 10:01:34</publishTime>
     </File>
     <File Include="System.Security.Cryptography.Xml.dll">
       <publishTime>04/18/2018 16:02:52</publishTime>
     </File>
     <File Include="System.Spatial.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="System.Text.Encoding.CodePages.dll">
       <publishTime>07/19/2017 10:01:36</publishTime>
     </File>
     <File Include="System.Text.Encodings.Web.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/19/2017 10:01:30</publishTime>
+    </File>
+    <File Include="uk/KovalukApp.resources.dll">
+      <publishTime>01/06/2019 21:30:39</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>12/19/2018 07:13:35</publishTime>
+      <publishTime>01/06/2019 21:39:35</publishTime>
     </File>
     <File Include="wwwroot/Colorize/Colorize.js">
       <publishTime>09/17/2018 12:26:27</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/CHANGELOG.md">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.common.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.esm.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.min.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/dist/cropper.min.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/LICENSE">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/package.json">
       <publishTime>10/12/2018 22:55:21</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/README.md">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/css/cropper.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/css/cropper.scss">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/images/bg.png">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.css">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/index.scss">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/change.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/constants.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/cropper.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/defaults.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/events.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/handlers.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/methods.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/preview.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/render.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/template.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/src/js/utilities.js">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/cropperjs/types/index.d.ts">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>10/26/1985 11:15:00</publishTime>
     </File>
     <File Include="wwwroot/dist/Css/Main.css">
-      <publishTime>11/27/2018 18:19:45</publishTime>
+      <publishTime>01/06/2019 17:14:00</publishTime>
     </File>
     <File Include="wwwroot/dist/Css/Preloader.css">
       <publishTime>09/28/2018 16:59:34</publishTime>
@@ -834,6 +843,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="wwwroot/dist/js/init.js">
       <publishTime>10/14/2018 23:25:40</publishTime>
+    </File>
+    <File Include="wwwroot/dist/js/Localiztion/Cookie.js">
+      <publishTime>01/06/2019 16:20:06</publishTime>
     </File>
     <File Include="wwwroot/dist/js/Preloader.js">
       <publishTime>10/14/2018 23:51:01</publishTime>
@@ -1061,22 +1073,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/24/2017 22:03:58</publishTime>
     </File>
     <File Include="zh-Hans/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:11</publishTime>
+      <publishTime>12/05/2018 17:50:11</publishTime>
     </File>
     <File Include="zh-Hans/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="zh-Hans/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
     <File Include="zh-Hant/Microsoft.Data.Edm.resources.dll">
-      <publishTime>05/12/2018 17:50:11</publishTime>
+      <publishTime>12/05/2018 17:50:11</publishTime>
     </File>
     <File Include="zh-Hant/Microsoft.Data.OData.resources.dll">
-      <publishTime>05/12/2018 17:50:00</publishTime>
+      <publishTime>12/05/2018 17:50:00</publishTime>
     </File>
     <File Include="zh-Hant/System.Spatial.resources.dll">
-      <publishTime>05/12/2018 17:50:03</publishTime>
+      <publishTime>12/05/2018 17:50:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

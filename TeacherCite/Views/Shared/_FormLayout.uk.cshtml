@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <!-- CSS  -->
+    <link href="~/materialized/matelialized.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="~/Colorize/Colorize.js"></script>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/materialized/materialized.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="~/dist/Css/Main.css" rel="stylesheet" />
+
+</head>
+<body class="form-body">
+   
+    <div class="fon" id="background" from-color="FFB273" to-color="FF7400" colorize="backgroundColor">
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script>
+        startColorize("background");
+
+    </script>
+</body>
+</html>

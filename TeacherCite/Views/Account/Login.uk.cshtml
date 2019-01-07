@@ -1,0 +1,87 @@
+﻿@model LoginViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Вхід";
+}
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-controller="Account" asp-action="Login"
+                  asp-route-returnUrl="@Model.ReturnUrl">
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div>
+                    <label asp-for="Email"></label><br />
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email" class="red-text"></span>
+                </div>
+                <div>
+                    <label asp-for="Password"></label><br />
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password" class="red-text"></span>
+
+                </div>
+                <div>
+                    <p>
+                        <label asp-for="RememberMe">
+                            <input type="checkbox" asp-for="RememberMe" class="filled-in" />
+                            <span>Запам'ятати мене?</span>
+                        </label>
+
+                    </p>
+                    <span class="teal-text"> <a class="modal-trigger reset" href="#reset">Забули пароль?</a></span>
+                </div>
+                <div>
+                    <div class="card-action row">
+                        <input type="submit" class="btn col s6" value="Увійти" />
+                        <a href="/" class="btn red right col s6">Відміна</a>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<div id="reset" class="modal">
+    <div class="modal-content">
+     
+            <h4 class="center">Зміна паролю</h4>
+            <div class="col s6 ">
+                <label>Введіть свою електронну адресу.</label><br />
+                <input id="email" type="email" />
+            </div>
+        </div>
+    
+    <div class="modal-footer">
+        <a href="#!" onclick="Reset()" class="modal-close waves-effect waves-green btn-flat">Підтвердити</a>
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Відміна</a>
+    </div>
+</div>
+<script>
+      $(document).ready(function(){
+    $('#reset').modal();
+    });
+
+    const Reset = () => {
+        let email = document.getElementById('email').value;
+        var formData = new FormData();
+        formData.set("Email", email);
+        $.ajax('/Account/ResetPassword', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success() {
+                M.toast({ html: '<blockquote class="green-text">Перевірте вашу пошту!</blockquote>', classes: 'rounded' });
+            },
+            error() {
+
+                M.toast({ html: '<blockquote class="red-text">Помилка, акаунту з такою адресою не існує!!!</blockquote>', classes: 'rounded' });
+            },
+        });
+    };
+</script>

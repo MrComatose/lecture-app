@@ -1,4 +1,6 @@
 ﻿@model KovalukApp.Models.User
+
+
 <ul id="slide-out" class="sidenav ">
     <li>
         <div class="user-view ">
@@ -24,20 +26,20 @@
             <br /><br />
         </div>
     </li>
-    <li><a class="subheader">Teacher Options</a></li>
-    <li><a href="/"><i class="material-icons">home</i>Home</a> </li>
-    <li><a asp-area="Teacher" asp-controller="Users" asp-action="List"><i class="material-icons">list</i>User accounts </a></li>
-    <li><a asp-area="Teacher" asp-controller="Group" asp-action="List"><i class="material-icons">group</i>Student Manager</a></li>
-    <li><a asp-area="Teacher" asp-controller="File" asp-action="List"><i class="material-icons">folder</i>File Manager</a></li>
-    <li><a asp-area="Teacher" asp-controller="Documentation" asp-action="List"><i class="material-icons">event</i>Documentation </a></li>
-    <li><a asp-area="Teacher" asp-controller="News" asp-action="List"><i class="material-icons">settings</i>News Manager</a></li>
-    <li><a asp-area="Teacher" asp-controller="Task" asp-action="List"><i class="material-icons">code</i>Tasks<span id="unchecked" class="badge chip red white-text"></span></a></li>
+    <li><a class="subheader">@ViewBag.Localizer["Teacher options"]</a></li>
+    <li><a href="/"><i class="material-icons">home</i>@ViewBag.Localizer["Home"]</a> </li>
+    <li><a asp-area="Teacher" asp-controller="Users" asp-action="List"><i class="material-icons">list</i>@ViewBag.Localizer["User accounts"]</a></li>
+    <li><a asp-area="Teacher" asp-controller="Group" asp-action="List"><i class="material-icons">group</i>@ViewBag.Localizer["Student Manager"]</a></li>
+    <li><a asp-area="Teacher" asp-controller="File" asp-action="List"><i class="material-icons">folder</i>@ViewBag.Localizer["File Manager"]</a></li>
+    <li><a asp-area="Teacher" asp-controller="Documentation" asp-action="List"><i class="material-icons">event</i>@ViewBag.Localizer["Documentation"]</a></li>
+    <li><a asp-area="Teacher" asp-controller="News" asp-action="List"><i class="material-icons">settings</i>@ViewBag.Localizer["News Manager"]</a></li>
+    <li><a asp-area="Teacher" asp-controller="Task" asp-action="List"><i class="material-icons">code</i>@ViewBag.Localizer["Tasks"]<span id="unchecked" class="badge chip red white-text"></span></a></li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Settings</a></li>
+    <li><a class="subheader">@ViewBag.Localizer["Settings"]</a></li>
 
 
-    <li><a class="waves-effect" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@User.Identity.Name" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>Edit my account</a></li>
-    <li><a class="waves-effect" href="/Account/Logout"><i class="material-icons">exit_to_app</i>log out</a></li>
+    <li><a class="waves-effect" asp-area="Teacher" asp-action="Edit" asp-controller="Account" asp-route-username="@User.Identity.Name" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)"><i class="material-icons">account_box</i>@ViewBag.Localizer["Edit my account"]</a></li>
+    <li><a class="waves-effect" href="/Account/Logout"><i class="material-icons">exit_to_app</i>@ViewBag.Localizer["log out"]</a></li>
 
     <li><br/><br /></li>
 </ul>

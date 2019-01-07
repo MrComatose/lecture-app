@@ -1,0 +1,116 @@
+﻿@model StDocViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.Page.Name;
+    ViewBag.Return = Model.returnUrl;
+}
+@if (Model.PersonalTasks != null || Model.FreeTasks.Count != 0)
+{
+    <div class="container blue lighten-3 z-depth-5">
+
+
+
+        @if (Model.PersonalTasks == null)
+        {
+            <h1 class="center blue white-text">Tasks</h1>
+            <ul class="collapsible " data-collapsible="accordion">
+
+                @foreach (var task in Model.FreeTasks)
+                {
+
+                    <li>
+                        <div class="collapsible-header blue lighten-3">
+                            <i class="material-icons">arrow_drop_down</i>@task.Name
+
+
+
+                        </div>
+                        <div class="collapsible-body teal lighten-5">
+                            <div class="chips">
+                                <div class="chip teal  white-text">Mark: @task.CurrentCost/@task.MaxCost</div>
+                                <div class="chip blue  white-text">DeadLine: @task.DeadLine.ToShortDateString()</div>
+                            </div>
+
+                            <p>@task.Description</p>
+
+                            <a class="red-text" asp-controller="Documentation" asp-action="ChooseTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Choose</a>
+
+                        </div>
+                    </li>
+                }
+
+
+            </ul>
+            <br />
+        }
+        else
+        {
+            <h1 class="center blue white-text">You task is:</h1>
+            <div class=" center blue lighten-3">
+                <h2> @Model.PersonalTasks.Name</h2>
+
+
+
+                <div class="">
+                    <div class="chips">
+                        <div class="chip teal  white-text">Mark: @Model.PersonalTasks.CurrentCost/@Model.PersonalTasks.MaxCost</div>
+                        <div class="chip blue  white-text">DeadLine: @Model.PersonalTasks.DeadLine.ToShortDateString()</div>
+                    </div>
+
+                    <p>@Model.PersonalTasks.Description</p>
+                    <h3>Good luck!!</h3>
+                    <br />
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+
+
+
+}
+<div class="container">
+
+    <div class=" markdown">@Html.Raw(Model.Html)</div>
+    <br /><br /><br />
+</div>
+@if (Model.Files.Count > 0)
+{
+    <div class="container green lighten-3 z-depth-5">
+        <h1 class="center green white-text">Files</h1>
+        <div class="section">
+            <div class="row">
+
+                @foreach (var item in Model.Files)
+                {
+
+                    <a class="purple-text" asp-area="" asp-controller="File" asp-action="GetFile" asp-route-filename="@item.FileName">
+
+                        <div class="col s12 m4">
+                            <div class="center icon-block">
+                                <img height="100" src="~/FileExtansions/File@(item.Extansion).png">
+                                <h5 class="center">@item.FileName </h5>
+                                <span class="badge orange white-text">@item.Size</span>
+                                <p class="light">@item.Description </p>
+                            </div>
+                        </div>
+
+                    </a>
+
+                }
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+<br /><br />
+<script>
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
+</script>

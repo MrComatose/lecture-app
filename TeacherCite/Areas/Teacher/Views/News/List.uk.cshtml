@@ -1,0 +1,131 @@
+﻿@model List<News>
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = "Новини";
+}
+<link href="~/cropperjs/dist/cropper.min.css" rel="stylesheet" />
+<script src="~/cropperjs/dist/cropper.min.js"></script>
+<div class="col s12">
+    <ul class="tabs">
+        <li class="tab col s3"><a href="#Add">Додати новину</a></li>
+        <li class="tab col s3"><a class="active" href="#List"><span class="blue white-text badge">@Model.Count </span>Всі новини</a></li>
+
+    </ul>
+</div>
+<div id="Add">
+    <div class="container">
+        <div class="row">
+            <div class="input-field col  s12">
+                <label>Назва</label><br />
+                <input id="name-input"  type="text" />
+
+            </div>
+            <div class="input-field col  s12">
+                <label>Текстова інформація:</label><br />
+                <textarea id="txtdata" class="materialize-textarea" data-length="500"></textarea>
+
+            </div>
+
+            <div class="input-field col l6">
+
+                <div class="file-field input-field">
+
+                    <div class="btn">
+                        <span><i class="material-icons">get_app</i></span>
+                        <input type="file" accept="image/x-png,image/gif,image/jpeg" onchange="readURL(this);" />
+
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Завантажити фотографію:" />
+                    </div>
+
+
+                </div>
+
+                <a href="#" class="btn green white-text" onclick="addNews()">Додати новину</a>
+            </div>
+
+
+            <img id="blah" height="200" src="">
+
+
+
+
+
+        </div>
+
+
+
+        <!-- Modal Structure -->
+        <div id="crop" class="modal">
+            <div class="modal-content">
+
+                <div class="cropper-container" style="max-height:300px;overflow:hidden;">
+                    <img class="responsive-img" id="image" src="" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-red btn-flat">Відміна</a>
+                <a class="btn modal-close" href="#" onclick="saveImage()">Зберегти фото</a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<div id="List">
+    <div class="container">
+        <div class="row">
+            <div class="col  s12">
+                @if (Model.Count != 0)
+                {
+
+
+                    <ul class="collapsible" data-collapsible="accordion">
+
+                        @foreach (var news in Model)
+                        {
+
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>@news.Name   <span class="blue badge white-text">@news.PublicationDate.ToShortDateString()</span></div>
+                                <div class="collapsible-body">
+
+                                    <p>@news.TextData</p>
+
+
+                                    <a asp-action="RemoveNews" class="red-text right" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-NewsID="@news.NewsID">Видалити</a>
+
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                }
+                else
+                {
+                    <h1> Новинний список порожній.</h1>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.tabs').tabs();
+    });
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
+
+
+</script>
+<script src="~/dist/js/Cropper/CroppingNews.js"></script>

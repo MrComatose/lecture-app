@@ -1,0 +1,187 @@
+﻿@model ShowPrivatePageViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.Name;
+    ViewBag.Icon = "data";
+    ViewBag.Return = Model.returnUrl;
+}
+
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#Files"><span class="orange white-text badge">@Model.Files.Count</span>Файлы</a></li>
+            <li class="tab col s3"><a class="active" href="#Data">Markdown/Html код</a></li>
+            <li class="tab col s3"><a href="#Tasks"><span class="blue white-text badge">@Model.Tasks.Count</span>Персональные задания</a></li>
+
+        </ul>
+    </div>
+
+    <div id="Files">
+        <div class="col s12 m3">
+            <div class="collection">
+                <a asp-action="AddDocFile" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-PageID=@Model.DocPageID class="collection-item blue white-text">Загрузить файл</a>
+            </div>
+        </div>
+        <div class="col s12 m9" >
+            @if (Model.Files.Count() == 0)
+            {
+                <blockquote>
+                    <h1> Список файлов пуст!</h1>
+
+                </blockquote>
+            }
+            else
+            {
+
+
+
+
+                <ul class="collapsible" data-collapsible="accordion">
+
+                    @foreach (var file in Model.Files)
+                    {
+
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>@file.FileName</div>
+                            <div class="collapsible-body">
+
+                                <p>@file.Description</p>
+                                <a class="purple-text left" asp-controller="File" asp-action="GetFile" asp-route-filename="@file.FileName">Скачать</a>
+                                    <a class="red-text right" asp-controller="File" asp-action="RemoveFile" asp-route-filename="@file.FileName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Удалить</a>
+
+                            </div>
+                        </li>
+                    }
+
+
+                </ul>
+
+
+
+
+
+
+            }
+        </div>
+    </div>
+
+    <div id="Data">
+
+
+        <div class="col m3 s12">
+
+            <div class="collection">
+
+                <a asp-action="AddMarkdownToPage" asp-route-PageID=@Model.DocPageID asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="collection-item blue white-text">Изменить Markdown/html код</a>
+
+            </div>
+
+
+        </div>
+        <div class="col m9 s12 " >
+
+
+            <div class=" markdown centered " style="counter-reset:inherit;">
+                @Html.Raw(Model.HtmlDataText)
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="Tasks">
+
+        <div class="col s12 m3">
+            <div class="collection">
+                <a asp-controller="Task" asp-action="AddTask" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-PageID=@Model.DocPageID class="collection-item blue white-text">Добавить задание</a>
+            </div>
+        </div>
+        <div class="col s12 m9" >
+            @if (Model.Tasks.Count() == 0)
+            {
+                <blockquote>
+                    <h1> Список заданий пуст!</h1>
+
+                </blockquote>
+            }
+            else
+            {
+
+
+
+
+                <ul class="collapsible " data-collapsible="accordion">
+
+                    @foreach (var task in Model.Tasks)
+                    {
+
+                        <li>
+                            <div class="collapsible-header teal lighten-4">
+                                <i class="material-icons">arrow_drop_down</i>@task.Task.Name
+                                @if (task.User != null)
+                                {
+                                    <span class="badge">
+                                        <a asp-controller="Account" asp-action="StudentProfile" asp-route-username="@task.User.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+
+                                            <span class="chip green white-text">
+                                                @if (task.User.Avatar == null)
+                                                {
+                                                    <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                                                }
+                                                else
+                                                {
+                                                    <img class="circle" style="object-fit: cover;" src="/File/Photo/@task.User.UserName">
+                                                }
+                                                @task.User.FirstName  @task.User.LastName
+                                            </span>
+                                        </a>
+                                    </span>
+                                   
+                                }
+                                else
+                                {
+                                    <span class="badge white-text chip red">Nobody</span>
+                                }
+                            </div>
+                            <div class="collapsible-body teal lighten-5">
+                                <div class="chips">
+                                    <div class="chip teal  white-text">Оценка: @task.Task.CurrentCost/@task.Task.MaxCost</div>
+                                    <div class="chip blue  white-text">Термин сдачи: @task.Task.DeadLine.ToShortDateString()</div>
+                                </div>
+
+                                <p>@task.Task.Description</p>
+                                <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Показать</a>
+                                <a class="red-text"  asp-controller="Task" asp-action="RemoveTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Удалить</a>
+
+                            </div>
+                        </li>
+                    }
+
+
+                </ul>
+
+
+
+
+
+
+            }
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.tabs').tabs();
+    });
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
+
+
+</script>

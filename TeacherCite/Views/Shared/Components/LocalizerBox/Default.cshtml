@@ -1,0 +1,22 @@
+﻿<script src="~/dist/js/Localiztion/Cookie.js"></script>
+
+<form class="right-align hide-on-small-and-down" action="#">
+
+    <label>
+        <input oninput="createCookie('UserCulture', 'c=uk|uic=uk', 2)" name="group1" type="radio" @Html.Raw(ViewBag.Culture.ToString() == "uk" ? "checked" : "") />
+        <span>UA</span>
+    </label>
+
+
+    <label>
+        <input oninput="createCookie('UserCulture', 'c=ru-RU|uic=ru-RU', 2)" name="group1" type="radio" @Html.Raw(ViewBag.Culture.ToString() == "ru-RU" ? "checked" : "") />
+        <span>RU</span>
+    </label>
+
+    <label>
+        <input oninput="createCookie('UserCulture', 'c=en-US|uic=en-US', 2)" name="group1" type="radio" @Html.Raw(ViewBag.Culture.ToString() == "en-US" ? "checked" : "") />
+        <span>EN</span>
+    </label>
+
+
+</form>

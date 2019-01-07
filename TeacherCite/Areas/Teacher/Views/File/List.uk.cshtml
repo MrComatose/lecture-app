@@ -1,0 +1,67 @@
+﻿@model List<FileNameData>
+
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = "Файли";
+    ViewBag.Icon = "file";
+
+}
+
+@section Menu{
+    <div class="collection">
+        <a asp-action="AddFile" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="collection-item blue white-text">Завантажити файл</a>
+
+
+    </div>
+}
+
+<div class=" card-content row ">
+
+
+
+
+    @foreach (var FileData in Model)
+    {
+        <div class="col  m4 s6 l3 xl2">
+           
+            <div class=" horizontal">
+              
+               
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <a class="purple-text" asp-action="GetFile" asp-route-filename="@FileData.FileName">
+                            <div class="card-image">
+                                <img src="~/FileExtansions/File@(FileData.Extansion).png">
+                            </div>
+                            <p id="File_@FileData.GetHashCode().ToString()" style="width:100px; height:100px; word-wrap:break-word;"> <span>@FileData.FileName </span> </p>
+                        </a>
+                        <span class="left orange-text" style="font-size:10px;"> @FileData.Size</span>
+                        <span class="right">
+                            <a asp-action="RemoveFile" asp-route-filename="@FileData.FileName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="secondary-content red-text"><i class="material-icons">delete</i></a>
+                        </span>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+<script src="~/dist/js/TextFill/TextFill.js"></script>
+
+@foreach (var FileData in Model)
+{
+    <script>
+
+
+        $('#File_@FileData.GetHashCode().ToString()').textfill({
+            maxFontPixels: 26,
+            minFontPixels: 6,
+            changeLineHeight: true
+                });
+
+    </script>
+}

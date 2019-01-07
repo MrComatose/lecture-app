@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Group>
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = "Групи";
+    ViewBag.Icon = "group";
+
+}
+
+    @section Menu{
+        <div class="collection">
+            <a asp-action="Add" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" class="collection-item blue white-text">Створити групу</a>
+
+
+        </div>
+    }
+
+    <div class="row">
+
+        @if (Model.Count() == 0)
+        {
+            <h1> Список груп студентів порожній!</h1>
+        }
+        else
+        {
+            foreach (var Group in Model)
+            {
+
+                <div class="col  s12">
+
+                    <div class="card  white darken-1">
+                        <div class="card-content teal-text">
+                            <span class="card-title">@Group.GroupName   </span>
+                            <blockquote>
+                                <span class="badge chip">Рік навчання: @Group.YearOfStudy</span>
+
+                            </blockquote>
+                            <p>@Group.Description</p>
+                        </div>
+                        <div class="card-action">
+                            <a asp-action="ShowGroup" class="waves-effect red waves-light btn blue" asp-route-GroupID=@Group.GroupID asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Обрати</a>
+
+                            <a class="waves-effect red waves-light btn modal-trigger" href="#modal@(Group.GroupID)">Видалити</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal@(Group.GroupID)" class="modal">
+                                <div class="modal-content">
+                                    <h4>Видалити @Group.GroupName?</h4>
+                                    <p>Вся інформація буде видаленна.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green white-text btn-flat green">Відміна</a>
+                                    <a asp-action="RemoveGroup" asp-route-GroupId="@Group.GroupID" class="modal-close waves-effect waves-green btn-flat red">Видалити</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        }
+    </div>
+
+<script>
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+</script>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <!-- CSS  -->
+    <link href="~/materialized/matelialized.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="~/Colorize/Colorize.js"></script>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/materialized/materialized.min.js"></script>
+    <script src="~/dist/js/Preloader.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="~/dist/Css/Main.css" rel="stylesheet" />
+    <link href="~/dist/Css/Preloader.css" rel="stylesheet" />
+
+    
+</head>
+<body style="overflow:hidden;">
+    
+        <div class="row " style="background-color:aquamarine;">
+            <nav >
+                <a href="#" data-target="slide-out" class="left sidenav-trigger "><i class="material-icons">menu</i></a>
+                @if (ViewBag.Return != null)
+                {
+
+                    <a class="sidenav-trigger left" href="@ViewBag.Return"><i class="material-icons  right">arrow_back</i></a>
+
+                }
+                <div class="nav-wrapper container">
+                    <a href="#!" class="brand-logo center">@ViewBag.Title<i class="material-icons">@ViewBag.Icon</i></a>
+                    <ul class="left hide-on-med-and-down">
+                        @if (ViewBag.Return != null)
+                        {
+                            <li class=" left-align">
+                                <a href="@ViewBag.Return"><i class="material-icons ">arrow_back</i></a>
+                            </li>
+                        }
+                        <li>
+                            <div data-target="slide-out" class="sidenav-trigger">
+                                <a href="#">@User.Identity.Name  <i class="material-icons  right">more_vert</i></a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+                    @await Component.InvokeAsync("LocalizerBox");
+                </div>
+
+
+
+            </nav>
+           
+                @await Component.InvokeAsync("Menu")
+
+                @if (IsSectionDefined("Menu"))
+                {
+            <div class="card" style="height:90vh;">
+                <div id="preloader">
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+              
+                    <div class="row">
+                        <div class="col s12 m3">
+
+                            @RenderSection("Menu")
+                        </div>
+                        <div class="col s12 m9 " style="height:80vh;  overflow-y:scroll;">
+                            @RenderBody()
+                        </div>
+                    </div>
+                
+            </div>
+                }
+                else
+                {
+
+                <div class="card " style="height:90vh; overflow-y:scroll;">
+                    <div id="preloader">
+                        <div class="progress">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </div>
+                    @RenderBody()
+
+                </div>
+                }
+
+
+            </div>
+ 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {
+                isDragged: false,
+                onCloseEnd: () => {
+                    $('body').css('overflow', 'hidden');
+                }
+                
+            });
+        });
+
+</script>
+
+</body>
+</html>
