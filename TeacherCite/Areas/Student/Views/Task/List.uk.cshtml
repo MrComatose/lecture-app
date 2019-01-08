@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<StTask>
 @{
     Layout = "ManagerLayout";
-    ViewBag.Title = "Tasks";
+    ViewBag.Title = "Завдання";
 
 }
 
+
 <div class="col s12">
     <ul class="tabs">
-        <li class="tab col s3"><a href="#AllTasks"><span class="orange white-text badge">@Model.Count() </span>All Tasks</a></li>
-        <li class="tab col s3"><a class="active" href="#UncTasks"><span class="blue white-text badge">@Model.Where(x => !x.IsChecked).Count() </span>Checked</a></li>
+        <li class="tab col s3"><a href="#AllTasks"><span class="orange white-text badge">@Model.Count() </span>Всі завдання</a></li>
+        <li class="tab col s3"><a class="active" href="#UncTasks"><span class="blue white-text badge">@Model.Where(x => x.IsChecked).Count() </span>Перевірені</a></li>
 
     </ul>
 </div>
@@ -16,7 +17,7 @@
     <div id="AllTasks">
         @if (Model.Count() == 0)
         {
-            <h1>No tasks</h1>
+            <h1>Немає завдань</h1>
         }
         else
         {
@@ -28,17 +29,18 @@
                     <li>
                         <div class="collapsible-header teal lighten-4">
                             <i class="material-icons">arrow_drop_down</i>@task.Name
-
+                          
                         </div>
                         <div class="collapsible-body teal lighten-5">
                             <div class="chips">
-                                <div class="chip teal  white-text">Mark: @task.CurrentCost/@task.MaxCost</div>
-                                <div class="chip blue  white-text">DeadLine: @task.DeadLine.ToShortDateString()</div>
+                                <div class="chip teal  white-text">Оцінка: @task.CurrentCost/@task.MaxCost</div>
+                                <div class="chip blue  white-text">Срок здачі: @task.DeadLine.ToShortDateString()</div>
                             </div>
 
                             <p>@task.Description</p>
-                            <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Show</a>
-                           
+                            <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Показати</a>
+                          
+
                         </div>
                     </li>
                 }
@@ -50,9 +52,9 @@
 
     </div>
     <div id="UncTasks">
-        @if (Model.Where(x => !x.IsChecked).Count() == 0)
+        @if (Model.Where(x => x.IsChecked).Count() == 0)
         {
-            <h1>No checked tasks</h1>
+            <h1>Ненмає перевірених завдань</h1>
         }
         else
         {
@@ -63,20 +65,19 @@
                 {
 
                     <li>
-                        <div class="collapsible-header red lighten-4">
+                        <div class="collapsible-header green lighten-4">
                             <i class="material-icons">arrow_drop_down</i>@task.Name
 
                         </div>
-                        <div class="collapsible-body red lighten-5">
+                        <div class="collapsible-body green lighten-5">
                             <div class="chips">
-                                <div class="chip teal  white-text">Mark: @task.CurrentCost/@task.MaxCost</div>
-                                <div class="chip blue  white-text">DeadLine: @task.DeadLine.ToShortDateString()</div>
+                                <div class="chip teal  white-text">Оцінка: @task.CurrentCost/@task.MaxCost</div>
+                                <div class="chip blue  white-text">Срок сдачі: @task.DeadLine.ToShortDateString()</div>
                             </div>
 
                             <p>@task.Description</p>
-                            <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Show</a>
+                            <a class="blue-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Показати</a>
                            
-
                         </div>
                     </li>
                 }

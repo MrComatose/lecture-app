@@ -1,0 +1,47 @@
+﻿@model RateTaskViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Оцінити/Залишити коментар";
+
+}
+<div class="valign-wrapper row">
+    <div class="col card hoverable s10 pull-s1 m8 pull-m2 l6 pull-l3">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="Rate">
+                <input type="hidden" value=@Model.TaskID asp-for="TaskID" />
+                <input type="hidden" value=@Model.returnUrl asp-for="returnUrl" />
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+
+               
+                        
+                
+                <div class="col s12">
+                    <label asp-for="CurrentRate">Оцінка</label> <span id="rate" class="badge blue white-text">@Model.CurrentRate</span>
+                    <p class="range-field">
+                        <input type="range" asp-for="CurrentRate" oninput="$('#rate').text(this.value)" min="0" max="@Model.MaxRate" />
+                    </p>
+
+                    <span asp-validation-for="CurrentRate" class="red-text"></span>
+                </div>
+                <br />
+
+
+                <div>
+                    <label asp-for="Description">Коментар</label><br />
+                    <textarea style="height:200px;" class="materialize-textarea" asp-for="Description"> </textarea>
+                    <span asp-validation-for="Description" class="red-text"></span>
+                </div>
+
+                <div>
+                    <input type="submit" class="btn " value="Додати" />
+                    <a href="@Model.returnUrl" class="btn red">Відміна</a>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+﻿
+
+@model IEnumerable<TaskModel>
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = "Задания";
+
+}
+@section Menu{
+    <script src="~/dist/js/Search/Tasks.js"></script>
+    <div>
+        <h5 href="#!" class="collection-item">Задания</h5>
+        <div class="input-field ">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" oninput="getTasks(this.value)" type="text" class="validate">
+            <label for="icon_prefix">Найти задание</label>
+            <div id="search-result">
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+}
+<div class="col s12">
+    <ul class="tabs">
+        <li class="tab col s3"><a href="#AllTasks"><span class="orange white-text badge">@Model.Count() </span>Все задания</a></li>
+        <li class="tab col s3"><a class="active" href="#UncTasks"><span class="blue white-text badge">@Model.Where(x => !x.Task.IsChecked).Count() </span>Непровереные</a></li>
+
+    </ul>
+</div>
+<div class="container">
+    <div id="AllTasks">
+        @if (Model.Count() == 0)
+        {
+            <h1>Нет заданий</h1>
+        }
+        else
+        {
+            <ul class="collapsible " data-collapsible="accordion">
+
+                @foreach (var task in Model)
+                {
+
+                    <li>
+                        <div class="collapsible-header teal lighten-4">
+                            <i class="material-icons">arrow_drop_down</i>@task.Task.Name
+                            @if (task.User != null)
+                            {
+                                <span class="badge">
+                                    <a asp-controller="Account" asp-action="StudentProfile" asp-route-username="@task.User.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+
+                                        <span class="chip green white-text">
+                                            @if (task.User.Avatar == null)
+                                            {
+                                                <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                                            }
+                                            else
+                                            {
+                                                <img class="circle" style="object-fit: cover;" src="/File/Photo/@task.User.UserName">
+                                            }
+                                            @task.User.FirstName  @task.User.LastName
+                                        </span>
+                                    </a>
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge white-text chip red">Никто</span>
+                            }
+                        </div>
+                        <div class="collapsible-body teal lighten-5">
+                            <div class="chips">
+                                <div class="chip teal  white-text">Оценка: @task.Task.CurrentCost/@task.Task.MaxCost</div>
+                                <div class="chip blue  white-text">Срок сдачи: @task.Task.DeadLine.ToShortDateString()</div>
+                            </div>
+
+                            <p>@task.Task.Description</p>
+                            <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Показать</a>
+                            <a class="red-text right" asp-controller="Task" asp-action="RemoveTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Удалить</a>
+                        </div>
+                    </li>
+                }
+
+
+            </ul>
+
+        }
+
+    </div>
+    <div id="UncTasks">
+        @if (Model.Where(x => !x.Task.IsChecked).Count() == 0)
+        {
+            <h1>Нет непровереных заданий</h1>
+        }
+        else
+        {
+
+            <ul class="collapsible " data-collapsible="accordion">
+
+                @foreach (var task in Model.Where(x => !x.Task.IsChecked))
+                {
+
+                    <li>
+                        <div class="collapsible-header red lighten-4">
+                            <i class="material-icons">arrow_drop_down</i>@task.Task.Name
+                            @if (task.User != null)
+                            {
+                                <span class="badge">
+                                    <a asp-controller="Account" asp-action="StudentProfile" asp-route-username="@task.User.UserName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">
+
+                                        <span class="chip green white-text">
+                                            @if (task.User.Avatar == null)
+                                            {
+                                                <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                                            }
+                                            else
+                                            {
+                                                <img class="circle" style="object-fit: cover;" src="/File/Photo/@task.User.UserName">
+                                            }
+                                            @task.User.FirstName  @task.User.LastName
+                                        </span>
+                                    </a>
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge white-text chip red">Никто</span>
+                            }
+                        </div>
+                        <div class="collapsible-body red lighten-5">
+                            <div class="chips">
+                                <div class="chip teal  white-text">Оценка: @task.Task.CurrentCost/@task.Task.MaxCost</div>
+                                <div class="chip blue  white-text">Срок сдачи: @task.Task.DeadLine.ToShortDateString()</div>
+                            </div>
+
+                            <p>@task.Task.Description</p>
+                            <a class="green-text" asp-controller="Task" asp-action="ShowTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Показать</a>
+                            <a class="red-text right" asp-controller="Task" asp-action="RemoveTask" asp-route-StTaskID="@task.Task.StTaskID" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Удалить</a>
+
+                        </div>
+                    </li>
+                }
+
+
+            </ul>
+
+
+        }
+
+    </div>
+</div>
+<script>
+
+    $(document).ready(function () {
+        $('.tabs').tabs();
+    });
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
+
+
+</script>

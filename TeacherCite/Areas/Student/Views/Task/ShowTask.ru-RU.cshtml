@@ -1,0 +1,122 @@
+﻿@model ShowTaskViewModel
+@{
+    Layout = "ManagerLayout";
+    ViewBag.Title = Model.Task.Name;
+    ViewBag.Return = Model.returnUrl;
+}
+@section Menu{
+<div class="collection">
+    <a asp-action="Perform" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-TaskID="@Model.Task.StTaskID" class="collection-item blue white-text">
+        Оставить коментарий
+    </a>
+    <a asp-action="AddTaskFile" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-TaskID="@Model.Task.StTaskID" class="collection-item blue white-text">
+        Добавить файл
+    </a>
+
+</div>
+}
+
+<div class="card yellow lighten-5">
+    <div class=" card-content">
+        <div class="card-title">
+            @Model.Task.Name
+            @if (Model.User != null)
+            {
+                <span class="badge">
+                    <span class="chip green white-text">
+                        @if (Model.User.Avatar == null)
+                        {
+                            <img class="circle" style="object-fit: cover;" src="~/img/img_avatar.png">
+                        }
+                        else
+                        {
+                            <img class="circle" style="object-fit: cover;" src="/File/Photo/@Model.User.UserName">
+                        }
+                        @Model.User.FirstName  @Model.User.LastName
+                    </span>
+                </span>
+            }
+            else
+            {
+                <span class="badge white-text chip red">Никто</span>
+            }
+        </div>
+
+        <div class="chips">
+            <div class="chip teal  white-text">Оценка: @Model.Task.CurrentCost/@Model.Task.MaxCost</div>
+            <div class="chip blue  white-text">Срок сдачи: @Model.Task.DeadLine.ToShortDateString()</div>
+        </div>
+
+        <p>@Model.Task.Description</p>
+        <h3>Файли</h3>
+        <ul class="collapsible green lighten-5" data-collapsible="accordion">
+            @foreach (var File in Model.Files)
+            {
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>@File.FileName</div>
+                    <div class="collapsible-body">
+
+                        <p>@File.Description</p>
+
+
+                        <a class="green-text left" asp-route-filename="@File.FileName" asp-area="" asp-controller="File" asp-action="GetFile">Открыть</a>
+                    </div>
+                </li>
+            }
+            @if (Model.Files.Count == 0)
+            {
+                <l1>
+                    Список файлов пуст.
+                </l1>
+            }
+
+        </ul>
+
+        <div class="row">
+            @foreach (var answer in Model.Answers)
+            {
+
+                <div class=" @(answer.IsTeacherAnswer?"col s12 blue lighten-5 card horizontal":"col s12 card horizontal")">
+
+                    <div class="card-content">
+                        <div class="avatar">
+                            @if (answer.User.Avatar == null)
+                            {
+                                <img class="circle" height="50" style="object-fit: cover;" src="~/img/img_avatar.png">
+                            }
+                            else
+                            {
+                                <img class="circle" height="50" style="object-fit: cover;" src="/File/Photo/@answer.User.UserName">
+                            }
+
+                            <p>
+                                @answer.User.FirstName <br>
+                                @answer.User.LastName
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>@answer.Answer.TextData</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="@(answer.IsTeacherAnswer?"chip black white-text":"chip blue white-text") " href="#">@answer.Answer.AnswerDate.ToShortDateString()</a>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
+
+
+</script>

@@ -5,11 +5,13 @@
     ViewBag.Return = Model.returnUrl;
 }
 @section Menu{
-    <div class="collection">
-        <a asp-action="Rate" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-TaskID="@Model.Task.StTaskID" class="collection-item blue white-text">rate task</a>
+<div class="collection">
+    <a asp-action="Rate" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-TaskID="@Model.Task.StTaskID" class="collection-item blue white-text">Оцінити/Залишити коментар</a>
 
-
-    </div>
+    <a asp-action="AddTaskFile" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)" asp-route-TaskID="@Model.Task.StTaskID" class="collection-item blue white-text">
+       Додати Файл
+    </a>
+</div>
 }
 
 <div class="card yellow lighten-5">
@@ -37,17 +39,17 @@
             }
             else
             {
-                <span class="badge white-text chip red">Nobody</span>
+                <span class="badge white-text chip red">Ніхто</span>
             }
         </div>
 
         <div class="chips">
-            <div class="chip teal  white-text">Mark: @Model.Task.CurrentCost/@Model.Task.MaxCost</div>
-            <div class="chip blue  white-text">DeadLine: @Model.Task.DeadLine.ToShortDateString()</div>
+            <div class="chip teal  white-text">Оцінка: @Model.Task.CurrentCost/@Model.Task.MaxCost</div>
+            <div class="chip blue  white-text">Срок здачі: @Model.Task.DeadLine.ToShortDateString()</div>
         </div>
 
         <p>@Model.Task.Description</p>
-        <h3>Files</h3>
+        <h3>Файли</h3>
         <ul class="collapsible green lighten-5" data-collapsible="accordion">
             @foreach (var File in Model.Files)
             {
@@ -57,15 +59,15 @@
 
                         <p>@File.Description</p>
 
-                        <a class="red-text right" asp-controller="File" asp-action="RemoveFile" asp-route-filename="@File.FileName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Delete</a>
-                        <a class="green-text left"  asp-route-filename="@File.FileName" asp-area="" asp-controller="File" asp-action="GetFile">Open</a>
+                        <a class="red-text right" asp-controller="File" asp-action="RemoveFile" asp-route-filename="@File.FileName" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Відмінити</a>
+                        <a class="green-text left"  asp-route-filename="@File.FileName" asp-area="" asp-controller="File" asp-action="GetFile">Відкрити</a>
                     </div>
                 </li>
             }
             @if (Model.Files.Count == 0)
             {
                 <l1>
-                    File list is empty.
+                    Список файлів порожній.
                 </l1>
             }
 
@@ -101,6 +103,7 @@
                             </div>
                             <div class="card-action">
                                 <a class="@(answer.IsTeacherAnswer?"chip black white-text":"chip blue white-text") " href="#">@answer.Answer.AnswerDate.ToShortDateString()</a>
+                                <a class="red-text right" asp-action="DeleteAnswer" asp-route-AnswerID="@(answer.Answer.AnswerID)" asp-route-returnUrl="@(Context.Request.Path+Context.Request.QueryString)">Видалити</a>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,47 @@
+﻿@model AddTaskFileViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Додати файл до завдання";
+}
+
+<div class="valign-wrapper row" style="height:95vh;">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="AddTaskFile" enctype="multipart/form-data">
+                <input type="hidden" asp-for="ReturnUrl"  />
+                <input type="hidden" asp-for="TaskID"  />
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span><i class="material-icons">add</i></span>
+                        <input asp-for="File" type="file" />
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Завантажити файл:" />
+                    </div>
+                    <span asp-validation-for="File" class="red-text"></span>
+
+                </div>
+                <div>
+                    <label asp-for="Desription">Опис:</label><br />
+                    <input asp-for="Desription" maxlength="100"/>
+                    <span asp-validation-for="Desription" class="red-text"></span>
+                </div>
+                <div>
+                    <div class="card-action row">
+                        <input type="submit" class="btn col s6" value="Додати" />
+                        <a href="@Model.ReturnUrl" class="btn red col s6">Відміна</a>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+

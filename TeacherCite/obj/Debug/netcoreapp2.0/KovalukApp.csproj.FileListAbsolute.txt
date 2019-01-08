@@ -8,7 +8,6 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\Kovaluk
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.AssemblyInfo.cs
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.dll
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.pdb
-C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.csprojAssemblyReference.cache
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\en-US\KovalukApp.resources.dll
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.csproj.GenerateResource.cache
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\en-US\KovalukApp.resources.dll
@@ -19,3 +18,4 @@ C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\Kovaluk
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\bin\Debug\netcoreapp2.0\uk\KovalukApp.resources.dll
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.Resources.ViewComponents.MenuViewComponent.uk.resources
 C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\uk\KovalukApp.resources.dll
+C:\Users\HP\source\repos\TeacherCite\TeacherCite\obj\Debug\netcoreapp2.0\KovalukApp.csprojAssemblyReference.cache

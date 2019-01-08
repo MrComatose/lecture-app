@@ -1,0 +1,67 @@
+﻿@model AddTaskViewModel
+@{
+    Layout = "_FormLayout";
+    ViewBag.Title = "Додати завдання";
+    
+}
+<div class="valign-wrapper row">
+    <div class="col card hoverable s10 pull-s1 m8 pull-m2 l6 pull-l3">
+        <div class="card-content">
+            <span class="card-title">@ViewBag.Title</span>
+            <form method="post" asp-action="AddTask">
+                <input type="hidden" value=@Model.DocPageID asp-for="DocPageID" />
+                <input type="hidden" value=@Model.returnUrl asp-for="returnUrl" />
+                <div asp-validation-summary="ModelOnly" class="red-text"></div>
+                <div class="col s12">
+                    <label asp-for="Name">Назва</label><br />
+                    <input asp-for="Name" />
+                    <span asp-validation-for="Name" class="red-text"></span>
+                </div>
+                <br />
+                <div class="col s12">
+                    <label asp-for="IsForAllStudents">
+
+                        <input type="checkbox" asp-for="IsForAllStudents" />
+                        <span class="green-text">Створити копії цього завдання для всіх студентів?</span>
+                        <span asp-validation-for="IsForAllStudents" class="red-text"></span>
+                    </label>
+                </div>
+                <br />
+                <div class="col s12">
+                    <label asp-for="MaxCost">Максимальний бал:</label>
+                    <input asp-for="MaxCost" />
+                    <span asp-validation-for="MaxCost" class="red-text"></span>
+                </div>
+                
+                <div class="col s12">
+                    
+                    <label asp-for="DeadLine">Крайній срок здачі:</label>
+
+                    <input class="datepicker" type="text" asp-for="DeadLine" value="@DateTime.Now" />
+
+                    <span asp-validation-for="DeadLine" class="red-text"></span>
+                </div>
+
+                <div class="col s12">
+                    <label asp-for="Description">Опис:</label><br />
+                    <textarea style="max-height:200px;" class="materialize-textarea" asp-for="Description"> </textarea>
+                    <span asp-validation-for="Description" class="red-text"></span>
+                </div>
+
+                <div>
+                    <input type="submit" class="btn " value="Додати" />
+                    <a href="@Model.returnUrl" class="btn red">Відміна</a>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+    $('.datepicker').datepicker();
+    });
+</script>

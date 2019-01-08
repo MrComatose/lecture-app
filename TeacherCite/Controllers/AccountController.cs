@@ -51,6 +51,10 @@ namespace KovalukApp.Controllers
                 Roles=roles,
                 HtmlData= sanitizer.Sanitize(CommonMark.CommonMarkConverter.Convert(user.Description??"### No description"))
             };
+            if (this.User.IsInRole("Teacher")&&roles.Contains("Student"))
+            {
+                return RedirectToAction("StudentProfile",new { Area="Teacher",Controller="Account", returnUrl=returnUrl,username=username });
+            }
             return View(model);
         }
         [HttpPost]

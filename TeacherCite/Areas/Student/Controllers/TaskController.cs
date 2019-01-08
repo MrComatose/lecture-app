@@ -86,6 +86,7 @@ namespace KovalukApp.Areas.Student.Controllers
                 return LocalRedirect(returnUrl);
             }
             var model = new PerformViewModel();
+            model.returnUrl = returnUrl;
             model.Answer = new Answer { AnswerDate=DateTime.Now,StTaskID=TaskID,UserID=student.Id};
             return View(model);
         }
@@ -127,7 +128,7 @@ namespace KovalukApp.Areas.Student.Controllers
                 {
                     return LocalRedirect(model.ReturnUrl);
                 }
-                if (Files.AllFiles.Any(x => x.FileName == model.File.FileName))
+                if (Files.StudentTaskFiles.Any(x => x.FileName == model.File.FileName && x.StTaskId == model.TaskID))
                 {
                     ModelState.AddModelError("", "File with name " + model.File.FileName + " is alredy exist.");
                     return View(model);

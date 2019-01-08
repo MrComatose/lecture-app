@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using KovalukApp.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace KovalukApp.Areas.Teacher.Controllers
 {
@@ -17,12 +19,19 @@ namespace KovalukApp.Areas.Teacher.Controllers
         IFileStorage Files;
         IGroupsRepository Repository;
         ApplicationContext Context;
-        public TaskController(IDocStorage docs, IFileStorage files, IGroupsRepository groups, ApplicationContext ctx)
+        IHostingEnvironment environment;
+        public TaskController(IDocStorage docs, 
+            IFileStorage files,
+            IGroupsRepository groups, 
+            ApplicationContext ctx,
+            IHostingEnvironment env
+            )
         {
             Documentation = docs;
             Files = files;
             Repository = groups;
             Context = ctx;
+            environment = env;
         }
 
         [HttpGet]
@@ -50,7 +59,7 @@ namespace KovalukApp.Areas.Teacher.Controllers
                             Description = Model.Description,
                             IsChecked = true,
                             UserID = student.Id,
-                            Name = Model.Name,
+                            Name = Model.Name+" "+student.NumberOfStudentBook,
                             MaxCost = Model.MaxCost,
                             DocPageID = Model.DocPageID
                         };
@@ -77,7 +86,17 @@ namespace KovalukApp.Areas.Teacher.Controllers
         }
         public IActionResult List()
         {
-            return View(Documentation.Tasks);
+            var model = new List<TaskModel>();
+            foreach (var task in Documentation.Tasks)
+            {
+                var taskmodel = new TaskModel()
+                {
+                    Task = task,
+                    User = Context.Students.FirstOrDefault(x=>x.Id==task.UserID)
+                };
+                model.Add(taskmodel);
+            }
+            return View(model);
         }
         public IActionResult UnChecked()
         {
@@ -157,20 +176,115 @@ namespace KovalukApp.Areas.Teacher.Controllers
             if (ModelState.IsValid)
             {
                  var oldrate = task.CurrentCost;
+             
                 task.CurrentCost = model.CurrentRate;
                 task.IsChecked = true;
                 Documentation.UpdateTask(task);
-                var answer = new Answer() {
-                    AnswerDate = DateTime.Now,
-                    StTaskID = task.StTaskID,
-                    TextData = model.Description,
-                    UserID=Context.Users.FirstOrDefault(x=>x.UserName==User.Identity.Name).Id
+                if (model.CurrentRate != oldrate)
+                {
+                   
 
-                };
-                Documentation.AddAnswer(answer);
+                    var answer = new Answer()
+                    {
+                        AnswerDate = DateTime.Now,
+                        StTaskID = task.StTaskID,
+                        TextData = $@"Оцінка була змінена з {oldrate} до {model.CurrentRate}",
+                        UserID = Context.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id
+
+                    };
+
+                    Documentation.AddAnswer(answer);
+                }
+                if (!String.IsNullOrEmpty(model.Description))
+                {
+                    
+                    var answer = new Answer()
+                    {
+                        AnswerDate = DateTime.Now,
+                        StTaskID = task.StTaskID,
+                        TextData = model.Description,
+                        UserID = Context.Users.FirstOrDefault(x => x.UserName == User.Identity.Name).Id
+
+                    };
+
+                    Documentation.AddAnswer(answer);
+                }
                 return LocalRedirect(model.returnUrl);
             }
             return View(model);
         }
-    }
+        [HttpGet]
+        public async Task<IActionResult> AddTaskFile(string returnUrl, int TaskID)
+        {
+            
+            var task = Documentation.Tasks.FirstOrDefault(x => x.StTaskID == TaskID );
+            if (task == null)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            var model = new AddTaskFileViewModel { ReturnUrl = returnUrl, TaskID = TaskID };
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddTaskFile(AddTaskFileViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var teacherID = Context.Users.FirstOrDefault(x=>x.UserName==this.User.Identity.Name).Id;
+                 var task = Documentation.Tasks.FirstOrDefault(x => x.StTaskID == model.TaskID);
+                if (task == null)
+                {
+                    return LocalRedirect(model.ReturnUrl);
+                }
+                if (Files.StudentTaskFiles.Any(x => x.FileName == model.File.FileName&&x.StTaskId==model.TaskID))
+                {
+                    ModelState.AddModelError("", "File with name " + model.File.FileName + " is alredy exist.");
+                    return View(model);
+                }
+
+                var directory = Directory.GetFiles(environment.ContentRootPath + @"/wwwroot/FileExtansions");
+
+                var ext = new String(model.File.FileName.TakeLast(model.File.FileName.Length - (model.File.FileName.LastIndexOf('.') == -1 ? model.File.FileName.Length : model.File.FileName.LastIndexOf('.')) - 1).ToArray());
+                if (!directory.Any(x => x == ("File" + ext + ".png")))
+                {
+                    ext = "";
+                }
+                var File = new TaskFile()
+                {
+                    FileName = model.File.FileName,
+                    FileExtansion = ext,
+                    StTaskId = model.TaskID,
+                    Description = model.Desription
+                };
+                using (var reader = new BinaryReader(model.File.OpenReadStream()))
+                {
+                    byte[] data = reader.ReadBytes((int)model.File.Length);
+                    File.FileSize = String.Format(new FileSizeFormatProvider(), "{0:fs}", data.LongLength);
+                    File.Value = data;
+                }
+
+                Files.AddFile(File);
+                task.IsChecked = true;
+                Documentation.AddAnswer(
+                    new Answer
+                    {
+                        AnswerDate = DateTime.Now,
+                        StTaskID = model.TaskID,
+                        UserID = teacherID,
+                        TextData = $"Adding file {File.FileName} to task."
+                    });
+                return LocalRedirect(model.ReturnUrl);
+            }
+            return View(model);
+        }
+    
+        public IActionResult DeleteAnswer(int AnswerID,string returnUrl)
+        {
+            Documentation
+                .RemoveAnswer(Documentation.Answers.FirstOrDefault(x=>x.AnswerID==AnswerID));
+            return LocalRedirect(returnUrl);
+        }
+
+
+}
 }

@@ -44,6 +44,7 @@ namespace KovalukApp.Models
 
         [Required]
         [UIHint("User Name")]
+        [MaxLength(30, ErrorMessage = "Max lenght of username is 30 symbols")]
         public string UserName { get; set; }
         
         [Required]

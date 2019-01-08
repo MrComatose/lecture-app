@@ -15,9 +15,11 @@ namespace KovalukApp.Areas.Teacher.Controllers
     public class SearchController : Controller
     {
         IUserRepository UserData;
-        public SearchController(IUserRepository users)
+        IDocStorage Documentation;
+        public SearchController(IUserRepository users,IDocStorage docs)
         {
             UserData = users;
+            Documentation = docs;
         }
         public IActionResult Index()
         {
@@ -46,6 +48,33 @@ namespace KovalukApp.Areas.Teacher.Controllers
             else { 
             return View(UserData.UsersData.Take(5).ToList());
             }
+        }
+        public IActionResult Tasks(string str)
+        {
+            IList<StTask> tasks = new List<StTask>();
+            
+            if (!(str == null || str == String.Empty))
+            {
+                var strings = str.Split(" ");
+
+                foreach (var item in strings)
+                {
+                    var taskcollection = Documentation.Tasks.Where(x=>x.Name.Contains(item));
+                    foreach (var task in taskcollection)
+                    {
+                        if (task != null && !tasks.Contains(task))
+                        {
+                            tasks.Add(task);
+                        }
+                    }
+                  
+                }
+
+
+                ViewBag.String = str;
+                
+            }
+            return View(tasks);
         }
     }
 }
