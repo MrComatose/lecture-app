@@ -9,7 +9,7 @@ description: Документація проекту. Проект розроб�
 {% hint style="info" %}
 [https://github.com/MrComatose/lecture-app](https://github.com/MrComatose/lecture-app) -  код
 
-[http://kovalukapp-001-site1.htempurl.com](http://kovalukapp-001-site1.htempurl.com) - сайт
+[https://kovalukapp.azurewebsites.net/](https://kovalukapp.azurewebsites.net/)- сайт
 {% endhint %}
 
 ## Завдання 
